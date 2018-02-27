@@ -1,4 +1,4 @@
-
+@import 'mixins';
 
 @import 'fonts';
 @import 'vars';
@@ -6,4 +6,5 @@
 @import 'defaults';
 
 // компоненты
+@import 'components/svg';
 @import 'components/header';
