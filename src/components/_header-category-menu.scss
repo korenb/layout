@@ -1,0 +1,32 @@
+.category-menu-container {
+    @include make-container;
+    background-color: $category-menu-color;
+    border-top: 3px solid $category-menu-border-color;
+}
+
+.category-menu-container .category-menu {
+    height: 39px;
+    @include F-ProximaNova(300);
+    font-size: 0.9375rem;
+    @include reset-list;
+    display: flex;
+    justify-content: center;
+    .category-menu-item {
+        display: flex;
+        align-items: center;
+        padding: 0 19px 0 20px;
+        color: #fff;
+        &:not(:last-child){
+            border-right: 1px solid $category-menu-splitter-color;
+        }
+        &:last-child{
+            margin-right: -20px;
+        }
+        &:first-child{
+            margin-left: -20px;
+        }
+        &:hover{
+            background-color: $category-menu-hover-color;
+        }
+    }
+}

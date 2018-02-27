@@ -65,3 +65,10 @@
 800 — сверхжирное;
 900 — тяжёлое.
 */
+
+@mixin F-ProximaNova($weight: null){
+    font-family: 'Proxima Nova';
+    @if($weight != null){
+        font-weight: $weight;
+    }
+}

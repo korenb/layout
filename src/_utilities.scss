@@ -1,0 +1,13 @@
+@mixin position-relative{
+    position: relative !important;
+}
+
+@mixin position-absolute{
+    position: absolute !important;
+}
+@mixin h100{
+    height: 100%;
+}
+@mixin pointer{
+    cursor: pointer;
+}

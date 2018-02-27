@@ -3,6 +3,7 @@ header{
     @include make-container;
     background-color: $main-navigation-color;
     height: 95px;
+    overflow: hidden;
 }
 
 header > .container{
@@ -18,28 +19,42 @@ header > .container{
 
     ul.nav{
         @include reset-list;
+        @include position-relative;
+        z-index: 5;
         li{
             display: inline-block;
+            vertical-align: middle;
             margin-right: 40px;
             &:last-child{
                 margin-right: 0;
             }
-
+            .shop-cart-icon{
+                height: 32px;
+            }
+        }
+        li.nav-item{
             &.active > a{
                 color: #211e1b;
                 border-bottom: 1px solid #211e1b;
+                font-weight: 800;
             }
             a{
                 color: #fff;
-                font-family: 'Proxima Nova';
+                @include F-ProximaNova(300);
                 font-size: 1.25rem;
-                font-weight: 300;
             }
             &:not(.active) > a:hover{
                 color: #fff;
                 text-shadow: 0 0 25px #1c1c1c;
                 border-bottom: 1px solid #fff;
             }
+        }
+
+        .circles{
+            @include position-absolute;
+            z-index: -1;
+            width: 737px;
+            @include offset(-73px, -498px);
         }
     }
 }
