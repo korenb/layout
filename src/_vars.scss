@@ -10,8 +10,11 @@ $container-max-widths: (
 // Свои переменные
 
 $main-navigation-color: #4a801e;
+$main-bg-color: #eff9f4;
 
-$category-menu-border-color: #eff9f4;
+$category-menu-border-color: $main-bg-color;
 $category-menu-color: #5e472a;
 $category-menu-hover-color: #41321e;
 $category-menu-splitter-color: #725633;
+
+$billboard-shadow: .5;

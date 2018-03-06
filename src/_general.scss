@@ -1,0 +1,22 @@
+@import 'components/sale-card';
+@import 'components/categories';
+@import 'components/solutions';
+
+.main-content {
+    background-color: $main-bg-color;
+    padding-top: 17px;
+    padding-bottom: 42px;
+    position: relative;
+    .sale-card {
+        margin-bottom: 22.5px;
+    }
+    .link-all-sales {
+        text-align: center;
+        margin-bottom: 57.5px;
+        & > a {
+            @include F-ProximaNova(400);
+            @include color(#855050, #4a801e);
+            @include border-bottom(1px, #855050, #4a801e);
+        }
+    }
+}

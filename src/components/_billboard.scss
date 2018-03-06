@@ -1,0 +1,60 @@
+
+.billboard-wrapper{
+    @include make-container;
+    background-image: url('/images/billboard.jpg');
+    background-size: cover;
+    background-position-y: 50%;
+    position: relative;
+    .bg-shadow{
+        background: linear-gradient(to top, #111, rgba(255, 255, 255, 0));
+        position: absolute;
+        @include h100;
+        @include w100;
+        left: 0;
+        top: 0;
+    }
+}
+
+.billboard-wrapper .container{
+    position: relative;
+    text-align: center;
+    padding-top: 211px;
+    color: #fff;
+    h1.title{
+        @include IntroInline(normal);
+        font-size: 5.125rem;
+        line-height: 76.73px;
+        letter-spacing: -2px;
+        text-transform: uppercase;
+        text-shadow: 0 0 16px #000;
+        margin-bottom: 3px;
+    }
+    h2.subtitle{
+        font-family: 'Roboto';
+        font-weight: 300;
+        line-height: 35.41px;
+        font-size: 1.813rem;
+        margin-bottom: 21px;
+    }
+    .separator{
+        @include size(181px, 3px);
+        background-color: #fff;
+        margin: 0 auto 62px auto;
+    }
+
+    .btn-order-call{
+        display: inline-block;
+        @include F-ProximaNova(400);
+        font-size: 1.25rem;
+        line-height: 29.98px;
+        color: #1c6781;
+        background-color: #fff;
+        padding: 7.5px 31.5px;
+        border-radius: 8px;
+        &:hover{
+            color: #fff;
+            background: linear-gradient(to top, #315513, #4a801e);
+        }
+    }
+    padding-bottom: 74px;
+}

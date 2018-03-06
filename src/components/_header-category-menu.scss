@@ -1,10 +1,10 @@
-.category-menu-container {
+.category-menu-wrapper {
     @include make-container;
     background-color: $category-menu-color;
     border-top: 3px solid $category-menu-border-color;
 }
 
-.category-menu-container .category-menu {
+.category-menu-wrapper .category-menu {
     height: 39px;
     @include F-ProximaNova(300);
     font-size: 0.9375rem;

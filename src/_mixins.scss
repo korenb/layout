@@ -7,3 +7,30 @@
     left: $x;
     top: $y;
 }
+@mixin size($w, $h){
+    width: $w;
+    height: $h;
+}
+@mixin color($color, $colorOnHover: null){
+    color: $color;
+    // @debug $colorOnHover;
+    @if $colorOnHover == null {
+        $colorOnHover: $color;
+    }
+    // @debug $colorOnHover;
+    &:hover{
+        color: $colorOnHover;
+    }
+}
+@mixin border-bottom($size, $color, $hover-color: null){
+    border-bottom: $size solid $color;
+    &:hover{
+        border-color: $hover-color;
+    }
+}
+@mixin border($size, $color, $hover-color: null){
+    border: $size solid $color;
+    &:hover{
+        border-color: $hover-color;
+    }
+}
