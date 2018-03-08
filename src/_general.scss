@@ -3,12 +3,17 @@
 @import 'components/solutions';
 @import 'components/about-company';
 @import 'components/stats';
+@import 'components/feedback';
 
 .main-content {
     background-color: $main-bg-color;
     padding-top: 17px;
-    padding-bottom: 42px;
+    padding-bottom: 87px;
     position: relative;
+    overflow: hidden;
+    .container{
+        position: relative;
+    }
     .sale-card {
         margin-bottom: 22.5px;
     }
@@ -19,6 +24,37 @@
             @include F-ProximaNova(400);
             @include color(#855050, #4a801e);
             @include border-bottom(1px, #855050, #4a801e);
+        }
+    }
+
+    .bg-vector{
+        svg.leaves1{
+            position: absolute;
+            height: 435px;
+            top: 766px;
+            left: -105px;
+        }
+        svg.leaves2{
+            position: absolute;
+            height: 315px;
+            top: 1458px;
+            right: -134px;
+        }
+        svg.leaves3{
+            position: absolute;
+            height: 315px;
+            bottom: -130px;
+            right: 15px;
+            transform: rotate(-20deg);
+        }
+        svg.circles{
+            position: absolute;
+            height: 1325px;
+            left: -645px;
+            bottom: -336px;
+            .st-circle{
+                fill: #e9f3ee;
+            }
         }
     }
 }
