@@ -1,0 +1,29 @@
+.stats {
+    color: #4a801e;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 144px;
+    .stat {
+        @include BebasNeue();
+        font-size: 10.69rem;
+        line-height: 9.5rem;
+        span {
+            font-size: 5.063rem;
+            line-height: 1;
+        }
+        p {
+            @include F-ProximaNova(400);
+            font-size: 1.25rem;
+            line-height: 1.563rem;
+            margin: 16px auto 0 auto;
+            width: 70%;
+        }
+    }
+    .stat-divider{
+        width: 2px;
+        height: 102px;
+        background-color: #b1b1b1;
+        margin-top: 35px;
+    }
+}

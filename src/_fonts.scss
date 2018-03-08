@@ -57,6 +57,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('/fonts/BebasNeueLight.woff2') format('woff2'),
+        url('/fonts/BebasNeueLight.woff') format('woff'),
+        url('/fonts/BebasNeueLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
 /* Intro */
 /* https://www.fontfabric.com/intro-free-font/ */
 
@@ -97,6 +106,13 @@
 
 @mixin IntroInline($weight: null){
     font-family: 'Intro Inline';
+    @if($weight != null){
+        font-weight: $weight;
+    }
+}
+
+@mixin BebasNeue($weight: null){
+    font-family: 'Bebas Neue';
     @if($weight != null){
         font-weight: $weight;
     }
