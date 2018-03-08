@@ -1,0 +1,20 @@
+.footer{
+    height: 84px;
+    background-color: #3b3b3b;
+    color: #fff;
+    .container, .row{
+        height: 100%;
+    }
+    .back-to-top{
+        @include color(#fff, #4a801e);
+        @include border-bottom(1px,#fff, #4a801e);
+        @include F-ProximaNova(700);
+        font-size: 1.25rem;
+        line-height: 1.563rem;
+    }
+    .copyright{
+        @include F-ProximaNova(300);
+        font-size: 1.25rem;
+        line-height: 1.563rem;
+    }
+}
