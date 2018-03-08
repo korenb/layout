@@ -1,0 +1,56 @@
+.contacts-wrapper {
+    background-image: url('/images/contact-bg.png');
+    background-size: cover;
+    background-color: transparent;
+    position: relative;
+    .contacts, .map{
+        @include make-col(1, 2);
+    }
+    .contacts {
+        padding-top: 120px;
+        padding-bottom: 61px;
+        padding-right: 32px;
+        color: #fff;
+        h1 {
+            @include IntroInline(400);
+            font-size: 3.625rem;
+            line-height: 3.375rem;
+            letter-spacing: -3px;
+            margin-bottom: 37px;
+        }
+        ul {
+            @include reset-list;
+            margin-bottom: 140px;
+            li {
+                @include F-ProximaNova(400);
+                font-size: 1.25rem;
+                line-height: 1.563rem;
+                .icon {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 100%;
+                    max-width: 28px;
+                    margin-right: 15px;
+                }
+            }
+            li:not(:last-child) {
+                margin-bottom: 31px;
+            }
+        }
+        .btn-download-price{
+            @include color(#fff,#0c1707);
+            padding: 5px 17px;
+            border-radius: 10px;
+            @include border(1px, #fff);
+            &:hover{
+                background-color: #fff;
+            }
+        }
+        .hashtag{
+            @include F-ProximaNova(700);
+            font-size: 1.563rem;
+            line-height: 1.563rem;
+            color: #fff;
+        }
+    }
+}
