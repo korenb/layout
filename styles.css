@@ -2023,7 +2023,7 @@ svg.logo.logo-white [class^="st"] {
   position: relative;
   overflow: hidden; }
   .main-content_bg_promo {
-    background: url("layoutlayout/images/promo-bg.png") no-repeat;
+    background: url("layout/images/promo-bg.png") no-repeat;
     background-size: contain;
     padding-top: 240px;
     padding-bottom: 240px; }
