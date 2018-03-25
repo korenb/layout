@@ -20,13 +20,7 @@
     text-align: center;
     padding-top: 211px;
     color: #fff;
-    h1.title{
-        @include IntroInline(normal);
-        font-size: 5.125rem;
-        line-height: 76.73px;
-        letter-spacing: -2px;
-        text-transform: uppercase;
-        text-shadow: 0 0 16px #000;
+    .title{
         margin-bottom: 3px;
     }
     h2.subtitle{
@@ -37,8 +31,6 @@
         margin-bottom: 21px;
     }
     .separator{
-        @include size(181px, 3px);
-        background-color: #fff;
         margin: 0 auto 62px auto;
     }
 

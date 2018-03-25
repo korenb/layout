@@ -1,0 +1,24 @@
+.suggestion-list{
+    padding: 23px 24px 29px 24px;
+    background-color: $white;
+
+    &__separator{
+        @include size(100%, 1px);
+        background-color: #eee;
+        margin: 35px auto;
+    }
+    &__sort + &__separator{
+        margin-top: 18px;
+    }
+    &__link{
+        text-align: center;
+    }
+    &__separator + &__link{
+        margin-top: -15px;
+    }
+
+    &__item{
+        padding-left: 11px;
+        padding-right: 20px;
+    }
+}

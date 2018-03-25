@@ -1,56 +1,26 @@
 
-header{
-    @include make-container;
+.header{
     background-color: $main-navigation-color;
     height: 95px;
     overflow: hidden;
 }
 
-header > .container{
+.header > .header__inner{
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    .logo{
+    .header__logo{
         padding: 3px 0 7px 0;
     }
 
-    ul.nav{
-        @include reset-list;
+    .header__menu{
         @include position-relative;
         z-index: 5;
-        li{
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 40px;
-            &:last-child{
-                margin-right: 0;
-            }
-            .shop-cart-icon{
-                height: 32px;
-            }
-        }
-        li.nav-item{
-            &.active > a{
-                color: #211e1b;
-                border-bottom: 1px solid #211e1b;
-                font-weight: 800;
-            }
-            a{
-                color: #fff;
-                @include F-ProximaNova(300);
-                font-size: 1.25rem;
-            }
-            &:not(.active) > a:hover{
-                color: #fff;
-                text-shadow: 0 0 25px #1c1c1c;
-                border-bottom: 1px solid #fff;
-            }
-        }
 
-        .circles{
+        .header__dec-circles{
             @include position-absolute;
             z-index: -1;
             width: 737px;

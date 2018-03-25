@@ -1,0 +1,28 @@
+.breadcrumb{
+    $q: '.breadcrumb';
+    display: flex;
+    @include reset-list;
+    &__item{
+
+        @include F-ProximaNova(700);
+        font-size: 1.25rem;
+        line-height: 1.563rem;
+        color: #4a801e;
+        border-bottom: 1px solid;
+
+        & > a{
+            @include color(inherit, true);
+        }
+        
+        &_separator,
+        &_active{
+            color: #555;
+            border: none;
+            font-weight: 400;
+        }
+
+        &_separator{
+            @include mx(20px);
+        }
+    }
+}

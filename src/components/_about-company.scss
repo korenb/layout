@@ -5,15 +5,7 @@
         @include make-col(1, 2);
     }
 
-    .title{
-        @include IntroInline(400);
-        font-size: 3.625rem;
-        line-height: 3.375rem;
-        letter-spacing: -3px;
-        margin-bottom: 40px; 
-        text-transform: uppercase;
-        color: #5e472a;
-    }
+    .title{ }
     p{
         @include F-ProximaNova(400);
         font-size: 1.25rem;

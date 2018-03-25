@@ -1,0 +1,11 @@
+.sort-switcher {
+    color: $muted;
+    line-height: 1.563;
+    &>a {
+        color: $green;
+        @include hover{
+            color: $green;
+        }
+        border-bottom: 1px solid;
+    }
+}

@@ -3,13 +3,13 @@
 @import 'fonts';
 @import 'vars';
 @import 'bootstrap';
-@import 'utilities';
+@import 'mixins/utilities';
 @import 'defaults';
 
 // компоненты
+@import 'blocks/index';
 @import 'components/svg';
 @import 'components/header';
-@import 'components/header-category-menu';
 @import 'components/billboard';
 @import 'general';
 @import 'components/contacts';

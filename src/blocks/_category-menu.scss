@@ -1,23 +1,20 @@
-.category-menu-wrapper {
-    @include make-container;
-    background-color: $category-menu-color;
-    border-top: 3px solid $category-menu-border-color;
-}
 
-.category-menu-wrapper .category-menu {
+
+.category-menu{
     height: 39px;
     @include F-ProximaNova(300);
     font-size: 0.9375rem;
     @include reset-list;
     display: flex;
     justify-content: center;
-    .category-menu-item {
+    
+    &__item {
         display: flex;
         align-items: center;
         padding: 0 19px 0 20px;
         color: #fff;
         &:not(:last-child){
-            border-right: 1px solid $category-menu-splitter-color;
+            border-right: 1px solid $brown-1;
         }
         &:last-child{
             margin-right: -20px;
@@ -26,7 +23,8 @@
             margin-left: -20px;
         }
         &:hover{
-            background-color: $category-menu-hover-color;
+            color: #fff;
+            background-color: $brown-3;
         }
     }
 }

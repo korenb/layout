@@ -11,11 +11,7 @@
         padding-bottom: 61px;
         padding-right: 32px;
         color: #fff;
-        h1 {
-            @include IntroInline(400);
-            font-size: 3.625rem;
-            line-height: 3.375rem;
-            letter-spacing: -3px;
+        .title {
             margin-bottom: 37px;
         }
         ul {

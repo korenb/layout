@@ -1,0 +1,7 @@
+.subtitle{
+    $subtitle_color: #555;
+
+    @include F-ProximaNova(400);
+    font-size: 1.25rem;
+    line-height: 1.563rem;
+}

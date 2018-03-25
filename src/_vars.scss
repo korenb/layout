@@ -1,20 +1,35 @@
 
-$container-max-widths: (
-    // sm: 540px,
-    // md: 720px,
-    // lg: 960px,
-    // xl: 1140px
-    xl: 1200px
-  ) !default;
+// $container-max-widths: (
+//     // sm: 540px,
+//     // md: 720px,
+//     // lg: 960px,
+//     // xl: 1140px
+//     xl: 1200px
+//   ) !default;
+
+  $font-family-base: 'Proxima Nova', sans-serif;
+  $line-height-base: 1.25;
+
+  $body-bg: #eff9f4;
+  $body-color: #555;
+
 
 // Свои переменные
 
-$main-navigation-color: #4a801e;
-$main-bg-color: #eff9f4;
+$green: #4a801e;
+$red: #c11a31;
+$muted: #a4a4a4;
+$brown: #855050;
 
-$category-menu-border-color: $main-bg-color;
-$category-menu-color: #5e472a;
-$category-menu-hover-color: #41321e;
-$category-menu-splitter-color: #725633;
+$main-navigation-color: $green;
+
+
+$brown-1: #725633;
+$brown-2: #5e472a;
+$brown-3: #41321e;
+
+$category-menu-border-color: $body-bg;
+$category-menu-color: $brown-2;
 
 $billboard-shadow: .5;
+

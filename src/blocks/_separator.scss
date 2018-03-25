@@ -1,0 +1,7 @@
+.separator {
+    @include size(180px, 3px);
+    background-color: #fff;
+    &_color_brown{
+        background-color: #5e472a;
+    }
+}

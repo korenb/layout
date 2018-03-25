@@ -21,3 +21,8 @@ width: 100%;
 @mixin pointer{
     cursor: pointer;
 }
+
+@mixin mx($val){
+    margin-left: $val;
+    margin-right: $val;
+}

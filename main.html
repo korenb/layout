@@ -13,9 +13,9 @@
 
     <div class="wrapper">
 
-        <header>
-            <div class="container">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000.6 2190.2" class="logo logo-white">
+        <header class="header">
+            <div class="header__inner page-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000.6 2190.2" class="logo logo-white header__logo">
                     <style type="text/css">
                         .st1 {
                             fill-rule: evenodd;
@@ -261,8 +261,8 @@
                     V1673.2L3922.7,1673.2z" />
                 </svg>
 
-                <ul class="nav">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3385.5 3385.5" class="circles">
+                <ul class="navigation-menu header__menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3385.5 3385.5" class="header__dec-circles">
                         <style type="text/css">
                             .st0 {
                                 fill-rule: evenodd;
@@ -301,24 +301,24 @@
                                 c-178,0-322.3-144.3-322.3-322.3C1370.5,1514.8,1514.8,1370.5,1692.8,1370.5L1692.8,1370.5z"
                         />
                     </svg>
-                    <li class="nav-item">
-                        <a href="javascript:;">О нас</a>
+                    <li class="navigation-menu__item">
+                        <a class="navigation-menu__link" href="javascript:;">О нас</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="javascript:;">Акции</a>
+                    <li class="navigation-menu__item">
+                        <a class="navigation-menu__link" href="javascript:;">Акции</a>
                     </li>
-                    <li class="nav-item active">
-                        <a href="javascript:;">Каталог</a>
+                    <li class="navigation-menu__item navigation-menu__item_active">
+                        <a class="navigation-menu__link" href="javascript:;">Каталог</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="javascript:;">Скачать прайс-лист</a>
+                    <li class="navigation-menu__item">
+                        <a class="navigation-menu__link" href="javascript:;">Скачать прайс-лист</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="javascript:;">Контакты</a>
+                    <li class="navigation-menu__item">
+                        <a class="navigation-menu__link" href="javascript:;">Контакты</a>
                     </li>
-                    <li>
-                        <a href="javascript:;">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="shop-cart-icon">
+                    <li class="navigation-menu__item">
+                        <a class="cart-icon" href="javascript:;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="cart-icon__svg">
                                 <style type="text/css">
                                     .st-cart {
                                         fill: #FFFFFF;
@@ -330,6 +330,7 @@
                                     c0,0.9,0.7,1.6,1.6,1.6s1.6-0.7,1.6-1.6C14.4,13.5,13.7,12.8,12.8,12.8L12.8,12.8z M12.8,12.8"
                                 />
                             </svg>
+                            <div class="cart-icon__counter hidden">3</div>
                         </a>
                     </li>
                 </ul>
@@ -337,15 +338,15 @@
         </header>
 
         <div class="category-menu-wrapper">
-            <div class="container">
+            <div class="page-container">
 
                 <div class="category-menu">
-                    <a class="category-menu-item" href="javascript:;">Погонажная продукция</a>
-                    <a class="category-menu-item" href="javascript:;">Пиломатериалы</a>
-                    <a class="category-menu-item" href="javascript:;">Утеплитель ОСБ, фанера</a>
-                    <a class="category-menu-item" href="javascript:;">Материалы для обработки</a>
-                    <a class="category-menu-item" href="javascript:;">Сопутствующие товары</a>
-                    <a class="category-menu-item" href="javascript:;">Изделия для бань и саун</a>
+                    <a class="category-menu__item" href="javascript:;">Погонажная продукция</a>
+                    <a class="category-menu__item" href="javascript:;">Пиломатериалы</a>
+                    <a class="category-menu__item" href="javascript:;">Утеплитель ОСБ, фанера</a>
+                    <a class="category-menu__item" href="javascript:;">Материалы для обработки</a>
+                    <a class="category-menu__item" href="javascript:;">Сопутствующие товары</a>
+                    <a class="category-menu__item" href="javascript:;">Изделия для бань и саун</a>
                 </div>
 
             </div>
@@ -354,16 +355,16 @@
         <div class="billboard-wrapper">
             <div class="bg-shadow"></div>
             <div class="container">
-                <h1 class="title">Погонажная
+                <h1 class="title title_size_lg title_shadow">Погонажная
                     <br>продукция</h1>
                 <h2 class="subtitle">От эконом до премиум сортов древесины</h2>
                 <div class="separator"></div>
                 <a href="javascript:;" class="btn-order-call">Заказать звонок</a>
             </div>
         </div>
-
+ 
         <main class="main-content">
-                <div class="bg-vector">
+                <div class="main-content__vectors">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 73.8 123.5" style="enable-background:new 0 0 73.8 123.5;" xml:space="preserve" class="leaves1">
                         <style type="text/css">
                             .leaves1-0{fill:#00853F;}
@@ -613,8 +614,8 @@
                     </svg>
                 </div>
 
-            <div class="container">
-                <a href="javascript:;" class="sale-card">
+            <div class="page-container">
+                <a href="javascript:;" class="sale-card main-content__sale">
                     <div class="sale-percent">20%</div>
                     <div class="sale-description">
                         <strong>LOREM IPSUM AVENT DOLOR</strong>
@@ -622,14 +623,14 @@
                     </div>
                 </a>
 
-                <div class="link-all-sales">
-                    <a href="javascript:;">Посмотреть все акции</a>
+                <div class="main-content__link-all-sales">
+                    <a href="javascript:;" class="link link_hover">Посмотреть все акции</a>
                 </div>
 
                 <div class="categories">
-                    <div class="suggestion-text">
+                    <div class="suggestion-text title title_brown">
                         Мы предлагаем
-                        <div class="separator"></div>
+                        <div class="separator separator_color_brown"></div>
                     </div>
 
                     <div class="category-item">
@@ -639,7 +640,7 @@
                         <div>
                             <div class="title">Погонажная продукция</div>
                             <div class="keywords">Вагонка штиль; Евровагонка; Фальш-брус Блок-хаус; Палубная и террасная доска; Финишный погонаж</div>
-                            <a href="javascript:;" class="details-link">Подробнее</a>
+                            <a href="javascript:;" class="link details-link">Подробнее</a>
                         </div>
                     </div>
                     <div class="category-item">
@@ -650,7 +651,7 @@
                             <div class="title">Пиломатериал</div>
                             <div class="keywords">Сухой пиломатериал;
                                 <br/> Пиломатериал естесственной влажности;</div>
-                            <a href="javascript:;" class="details-link">Подробнее</a>
+                            <a href="javascript:;" class="link details-link">Подробнее</a>
                         </div>
                     </div>
                     <div class="category-item">
@@ -661,7 +662,7 @@
                             <div class="title">Материалы для обработки</div>
                             <div class="keywords">Масла; Антисептик;
                                 <br/> Лаки; Краски; </div>
-                            <a href="javascript:;" class="details-link">Подробнее</a>
+                            <a href="javascript:;" class="link details-link">Подробнее</a>
                         </div>
                     </div>
                     <div class="category-item">
@@ -672,7 +673,7 @@
                             <div class="title">Лестницы, OSB, утеплители</div>
                             <div class="keywords">Комплектующие для лестниц;
                                 <br/> Утеплители; ОСБ; Фанера;</div>
-                            <a href="javascript:;" class="details-link">Подробнее</a>
+                            <a href="javascript:;" class="link details-link">Подробнее</a>
                         </div>
                     </div>
                     <div class="category-item">
@@ -683,7 +684,7 @@
                             <div class="title">Изделия для бань и саун</div>
                             <div class="keywords">Двери; Лавки: Ручки;
                                 <br> Столы; Форточки;</div>
-                            <a href="javascript:;" class="details-link">Подробнее</a>
+                            <a href="javascript:;" class="link details-link">Подробнее</a>
                         </div>
                     </div>
                     <div class="category-item">
@@ -694,7 +695,7 @@
                             <div class="title">Сопутствующий товар</div>
                             <div class="keywords">Саморезы; Пена;
                                 <br> Огнебиозащита; Гвозди;</div>
-                            <a href="javascript:;" class="details-link">Подробнее</a>
+                            <a href="javascript:;" class="link details-link">Подробнее</a>
                         </div>
                     </div>
 
@@ -710,7 +711,7 @@
 
                 <div class="about-company">
                     <div>
-                        <h2 class="title">О компании</h2>
+                        <h2 class="title title_brown">О компании</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis sagittis ex et interdum.
                             Aliquam ultricies sit amet elit vel porttitor. Etiam eros odio, tempor sed ex id, sollicitudin
                             fringilla est. Vivamus venenatis neque ac turpis fermentum, et egestas nunc feugiat.</p>
@@ -990,7 +991,7 @@
                 </div>
 
                 <div class="feedback">
-                    <h1>Оставьте заявку</h1>
+                    <h1 class="title title_brown">Оставьте заявку</h1>
                     <p>Нам важно, чтобы каждый клиент остался довольным. <br>
                         Оставьте ваши контактные данные и наш специалист свяжется с вами.</p>
                     <div class="divider"></div>
@@ -1009,7 +1010,7 @@
             <div class="container">
                 <div class="row">
                     <div class="contacts">
-                        <h1>Контакты</h1>
+                        <h1 class="title">Контакты</h1>
                         <ul>
                             <li>
                                 <div class="icon">

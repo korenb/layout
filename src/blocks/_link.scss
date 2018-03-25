@@ -1,0 +1,20 @@
+.link {
+    color: $brown;
+    &:hover {
+        color: $brown;
+    }
+    border-bottom: 1px solid;
+    line-height: 1.563rem;
+    &_hover:hover {
+        color: $green;
+    }
+
+    &_lg{
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+}
+
+.link.link_color_green, .link.link_color_green:hover{
+    color: $green;
+}

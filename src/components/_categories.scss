@@ -2,18 +2,10 @@
     @include make-row();
     .suggestion-text {
         @include make-col(1, 1);
-        @include IntroInline(400);
-        font-size: 3.625rem;
-        line-height: 3.375rem;
-        color: #5e472a;
-        letter-spacing: -3px;
         text-align: center;
     }
     .suggestion-text>.separator {
-        // @include make-col(1, 1);
-        @include size(180px, 3px);
         margin: 19px auto 51.5px auto;
-        background-color: #5e472a;
     }
     .category-item {
         &:nth-child(even) {
@@ -56,11 +48,8 @@
             color: #555555; // margin-bottom: 36px;
         }
         .details-link {
-            @include F-ProximaNova(400);
             font-size: 1.25rem;
             line-height: 1.813rem;
-            @include color(#855050);
-            border-bottom: 1px solid;
             margin-bottom: 6px;
         }
     }

@@ -1,0 +1,27 @@
+$navigation-menu__item_active-color: #211e1b;
+.navigation-menu {
+    @include reset-list;
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        color: #fff;
+        @include F-ProximaNova(300);
+        font-size: 1.25rem;
+    }
+    &__item_active>&__link {
+        color: $navigation-menu__item_active-color;
+        border-bottom: 1px solid $navigation-menu__item_active-color;
+        font-weight: 800;
+    }
+    &__item:not(&__item_active)>&__link:hover {
+        color: #fff;
+        text-shadow: 0 0 25px #1c1c1c;
+        border-bottom: 1px solid #fff;
+    }
+}
