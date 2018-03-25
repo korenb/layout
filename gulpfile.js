@@ -5,7 +5,7 @@ var watch = require('gulp-watch');
 gulp.task('compile:scss', function() {
     return gulp.src('./src/styles.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./layout/css'));
 });
 
 gulp.task('watch', function () {

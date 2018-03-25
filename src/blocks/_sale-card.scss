@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     @include color(#fff);
-    background: url('/images/sale-bg.jpg');
+    background: url('/layout/images/sale-bg.jpg');
 
     .sale-percent{
         @include F-ProximaNova(800);

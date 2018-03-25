@@ -1,7 +1,7 @@
 
 .billboard-wrapper{
     @include make-container;
-    background-image: url('/images/billboard.jpg');
+    background-image: url('/layout/images/billboard.jpg');
     background-size: cover;
     background-position-y: 50%;
     position: relative;
