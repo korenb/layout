@@ -1,7 +1,8 @@
 .btn{
-    padding: 6px 26px;
-    line-height: 1.25;
+    display: inline-block;
     border-radius: 9px;
+
+    /* themes */
     color: $white;
     background-color: $green;
     @include hover{
@@ -14,5 +15,19 @@
         @include hover{
             color: $green;
         }
+    }
+    // brown
+    &_brown{
+        background-color: $brown-2;
+    }
+
+    /* sizes */
+    padding: 6px 26px;
+    line-height: 1.25;
+    &_lg{
+        line-height: 1.813;
+        font-size: 1.25rem;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }

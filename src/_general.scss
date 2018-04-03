@@ -9,6 +9,7 @@
 }
 
 .main-content {
+    $q: &;
     background-color: $body-bg;
     padding-top: 17px;
     padding-bottom: 87px;
@@ -20,6 +21,16 @@
         padding-top: 240px;
         padding-bottom: 240px;
     }
+    &_bg_catalog{
+        background: url('layout/images/catalog-bg.png') no-repeat;
+        background-size: contain;
+        padding-top: 240px;
+        padding-bottom: 66px;
+        #{$q}__solutions{
+            padding-top: 8px;
+            padding-bottom: 61px;
+        }
+    }
 
     &__title,
     &__subtitle{
@@ -27,6 +38,9 @@
     }
     &__title{
         margin-bottom: 13px;
+    }
+    &__btn{
+        margin-top: 34px;
     }
 
     &__breadcrumb{
@@ -37,6 +51,11 @@
 
     &__suggestion{
         margin-bottom: 28px;
+    }
+
+    &__solutions{
+        padding-top: 8px;
+        padding-bottom: 122px;
     }
 
     .page-container{
@@ -96,6 +115,23 @@
             height: 958px;
             left: -376px;
             bottom: -329px;
+        }
+    }
+    &_bg_catalog &__vectors{
+        svg.leaves1{
+            top: 1250px;
+            left: -82px;
+        }
+        svg.leaves2{
+            transform: scale(1, -1) rotate(-67deg);
+            top: 1000px;
+            right: -120px;
+        }
+        svg.leaves3{
+            display: none;
+        }
+        svg.circles{
+            display: none;
         }
     }
 }

@@ -1,11 +1,9 @@
 .solutions{
     text-align: center;
-    padding-top: 8px;
-    padding-bottom: 122px;
     .picture{
         margin-bottom: 19px;
     }
-    .title{
+    &__title{
         color: #4a801e;
         margin-bottom: 1px;
         @include F-ProximaNova(700);
@@ -17,9 +15,9 @@
         @include F-ProximaNova(400);
         font-size: 1.25rem;
         line-height: 1.563rem;
-        margin-bottom: 30.5px;
     }
     .catalog-link{
+        margin-top: 30px;
         padding: 7px 22px;
         @include F-ProximaNova(400);
         font-size: 1.25rem;

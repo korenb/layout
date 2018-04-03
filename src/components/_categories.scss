@@ -34,7 +34,7 @@
             align-items: flex-start;
             height: 100%;
         }
-        .title {
+        &__title {
             @include F-ProximaNova(700);
             text-transform: uppercase;
             font-size: 2.313rem;

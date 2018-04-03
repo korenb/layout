@@ -12,7 +12,7 @@
   *::after {
     box-sizing: inherit;
   }
-  
+
   @import "../node_modules/bootstrap/scss/functions";
   @import "../node_modules/bootstrap/scss/variables";
   @import "../node_modules/bootstrap/scss/mixins";
@@ -21,4 +21,6 @@
   @import "../node_modules/bootstrap/scss/grid";
   @import "../node_modules/bootstrap/scss/utilities/display";
   @import "../node_modules/bootstrap/scss/utilities/flex";
+  @import "../node_modules/bootstrap/scss/utilities/spacing";
+  @import "../node_modules/bootstrap/scss/utilities/text";
   
