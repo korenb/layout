@@ -1,0 +1,74 @@
+extends shared/layout
+
+block content
+
+    include shared/_category-menu
+
+    include partials/billboard
+
+    main.main-content
+        .main-content__vectors
+            include svg/leaves1.svg
+            include svg/leaves2.svg
+            include svg/leaves3.svg
+            include svg/dec-circles.svg
+
+        .page-container
+            +sale-card('main-content__sale')
+            .main-content__link-all-sales
+                a(href="javascript:;").link.link_hover Посмотреть все акции
+
+            .categories
+                .suggestion-text.title.title_brown
+                    | Мы предлагаем
+                    .separator.separator_color_brown
+                include partials/categories
+
+            +solutions('main-content__solutions', true)
+
+            .about-company
+                div
+                    h2.title.title_brown О компании
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis sagittis ex et interdum. Aliquam ultricies sit amet elit vel porttitor. Etiam eros odio, tempor sed ex id, sollicitudin fringilla est. Vivamus venenatis neque ac turpis fermentum, et egestas nunc feugiat.
+                    p Nam congue rhoncus ligula, vitae bibendum magna faucibus a. Phasellus vestibulum, libero in vulputate consectetur, est nibh blandit lectus, vitae ultrices dui leo non tellus. Suspendisse tincidunt ex aliquet velit commodo posuere et id ex. Vestibulum ornare, urna sit amet consequat mollis, dui tortor condimentum mi, suscipit facilisis lacus dui ut ex.
+                div
+                    include svg/logo.svg
+
+            .stats
+                .stat
+                    div 120 <span>м<sup>2</sup></span>
+                    p Lorem Ipsum avent dolor sit ament
+                .stat-divider
+                .stat
+                    div 12
+                    p Lorem Ipsum avent dolor sit ament
+                .stat-divider
+                .stat
+                    div 3 330
+                    p Lorem Ipsum avent dolor sit ament
+
+            +feedback(true)
+
+    .contacts-wrapper
+        .container
+            .row
+                .contacts
+                    h1.title Контакты
+                    ul
+                        li
+                            .icon
+                                include svg/marker.svg
+                            span г. Челябинск, ул. Кузнецова д. 47
+                        li
+                            .icon
+                                include svg/phone.svg
+                            span +7 (919) 301-11-14; +7 (919) 301-11-15
+                        li
+                            .icon
+                                include svg/dog.svg
+                            span service@elitewood.ru
+                    .d-flex.justify-content-between.align-items-center
+                        a(href="javascript:;").btn-download-price Скачать прайс-лист
+                        .hashtag #элитвуд
+                .map
+                    iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab70d33ee2235966ca6d2c4cef25d5ede67fd3f1fbbe5e2c65485768ea155125f&amp;source=constructor" width="100%" height="100%" frameborder="0")

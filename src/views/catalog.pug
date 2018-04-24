@@ -1,0 +1,28 @@
+extends shared/layout
+
+block content
+    include shared/_category-menu
+
+    main.main-content.main-content_bg_catalog
+        .main-content__vectors
+            include svg/leaves1.svg
+            include svg/leaves2.svg
+            include svg/leaves3.svg
+
+        .page-container
+            .title.title_brown.main-content__title
+                | Каталог продукции
+            p.subtitle.main-content__subtitle
+                | Если вы не найдете подходящий для вас вариант продукции,<br>
+                | свяжитесь с нами и мы обязательно решим ваш вопрос
+            .main-content__btn.text-center
+                a.btn.btn_brown.btn_lg(href="javascript:;") Заказать звонок
+
+            +breadcrumbs(['Главная', 'Каталог'], 'main-content__breadcrumb')
+
+            .categories
+                include partials/categories
+
+            +solutions('main-content__solutions')
+
+            +feedback

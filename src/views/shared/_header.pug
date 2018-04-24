@@ -1,0 +1,19 @@
+
+- var headerPages = locals['header-pages']
+- var showCartItemsCounter = false
+
+header.header
+    .header__inner.page-container
+        .header__logo.logo-white
+            include ../svg/logo.svg
+        ul.navigation-menu.header__menu
+            .header__dec-circles
+                include ../svg/dec-circles.svg
+            each item in headerPages
+                li.navigation-menu__item(class=typeof item.active === 'undefined' ? undefined : 'navigation-menu__item_active')
+                    a.navigation-menu__link(href="javascript:;")= item.title
+            li.navigation-menu__item
+                a.cart-icon(href="javascript:;")
+                    .cart-icon__svg
+                        include ../svg/cart.svg
+                    .cart-icon__counter(class=showCartItemsCounter == true ? '' : 'hidden' )

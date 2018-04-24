@@ -1,0 +1,7 @@
+
+mixin sale-card(cls)
+    a(href="javascript:;" class=typeof cls == 'undefined' ? undefined : cls).sale-card
+        .sale-percent 20%
+        .sale-description
+            | <strong>LOREM IPSUM AVENT DOLOR</strong>
+            | АКЦИЯ ДЕЙСТВУЕТ ДО: 12.03.2018

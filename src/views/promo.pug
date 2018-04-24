@@ -1,0 +1,55 @@
+extends shared/layout
+
+block content
+
+    include shared/_category-menu
+
+    main.main-content.main-content_bg_promo
+        .main-content__vectors
+            include svg/leaves1.svg
+            include svg/leaves2.svg
+            include svg/leaves3.svg
+            include svg/dec-circles.svg
+        
+        .page-container
+            .title.title_brown.main-content__title Специальные предложения
+            p.subtitle.main-content__subtitle Мы регулярно обновляем наш раздел с акциями,<br> чтобы ваши покупки были еще выгоднее для вас.
+
+            +breadcrumbs(['Главная', 'Акции'], 'main-content__breadcrumb')
+
+            .week-suggestion.main-content__suggestion
+                .week-suggestion__caption
+                    include svg/dec-circles.svg
+                    h1.week-suggestion__caption-text Предложение недели:
+                .suggestion.week-suggestion__content
+                    .suggestion__picture
+                        img(src="/images/suggestions/1.png", alt="")
+                    .suggestion__description
+                        h3.suggestion__description-title Защитно-декоративное покрытие «ZERWOOD»
+                        h4.suggestion__description-caution Заканчивается через 03 дн 13 часов 29 минут 17 секунд
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis sagittis ex et interdum. Aliquam ultricies sit amet elit vel porttitor. Etiam eros odio, tempor sed ex id, sollicitudin fringilla est. Vivamus venenatis neque ac turpis fermentum, et egestas nunc feugiat. 
+                        a(href="javascript:;").link.link_color_green Подробнее
+                    .suggestion__prices
+                        .suggestion__price-old 500 ₽ / л
+                        .suggestion__price 300 ₽ / л
+                        .suggestion__price-benefit Выгода 40%
+                        a(href="javascript:;").suggestion__price-btn-to-cart.btn.btn_outline В корзину
+
+            .suggestion-list
+                .sort-switcher.suggestion-list__sort
+                    | Сортировать:
+                    a(href="javascript:;") сначала старые
+                .suggestion-list__separator
+                +sale-card
+                .suggestion-list__separator
+                +sale-card
+                .suggestion-list__separator
+                include partials/suggestion-item-minimized
+                .suggestion-list__separator
+                include partials/suggestion-item-minimized
+                .suggestion-list__separator
+                +sale-card
+                .suggestion-list__separator
+
+                .suggestion-list__link
+                    a(href="javascript:;").link.link_color_green.link_lg Перейти в каталог

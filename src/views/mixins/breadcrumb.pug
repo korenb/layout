@@ -1,0 +1,7 @@
+
+mixin breadcrumbs(items, cls)
+    ul.breadcrumb(class=typeof cls == 'undefined' ? undefined : cls)
+        li.breadcrumb__item
+            a(href="javascript:;") Главная
+        li.breadcrumb__item.breadcrumb__item_separator >
+        .breadcrumb__item.breadcrumb__item_active Каталог

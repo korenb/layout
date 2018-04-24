@@ -1,0 +1,8 @@
+
+- var categoryMenuItems = locals['category-menu-items']
+
+.category-menu-wrapper
+    .page-container
+        .category-menu
+            each item in categoryMenuItems
+                a.category-menu__item(href="javascript:;")=item.title

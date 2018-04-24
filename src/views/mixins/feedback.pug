@@ -1,0 +1,13 @@
+
+mixin feedback(full)
+    .feedback
+        if full
+            h1.title.title_brown Оставьте заявку
+            p Нам важно, чтобы каждый клиент остался довольным.<br> Оставьте ваши контактные данные и наш специалист свяжется с вами.
+            .divider
+        form(onsubmit="$event.preventDefault(); return false;")
+            input(type="text" placeholder="Имя Фамилия").form-control
+            input(type="text" placeholder="Номер телефона или Email").form-control
+            input(type="text" placeholder="Интересующая область (например, Баня под ключ)").form-control
+            textarea(placeholder="Пометки").form-control
+            button(type="submit") Отправить

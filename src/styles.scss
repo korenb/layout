@@ -1,16 +1,16 @@
-@import 'mixins';
+@import 'styles/mixins';
 
-@import 'fonts';
-@import 'vars';
-@import 'bootstrap';
-@import 'mixins/utilities';
-@import 'defaults';
+@import 'styles/fonts';
+@import 'styles/vars';
+@import 'styles/bootstrap';
+@import 'styles/mixins/utilities';
+@import 'styles/defaults';
 
 // компоненты
-@import 'blocks/index';
-@import 'components/svg';
-@import 'components/header';
-@import 'components/billboard';
-@import 'general';
-@import 'components/contacts';
-@import 'components/footer';
+@import 'styles/blocks/index';
+@import 'styles/components/svg';
+@import 'styles/components/header';
+@import 'styles/components/billboard';
+@import 'styles/general';
+@import 'styles/components/contacts';
+@import 'styles/components/footer';

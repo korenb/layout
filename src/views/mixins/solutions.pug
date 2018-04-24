@@ -1,0 +1,8 @@
+
+mixin solutions(cls, link)
+    .solutions(class=typeof cls == 'undefined' ? undefined : cls)
+        img(src="images/done-solutions.png").picture
+        h2.solutions__title Готовые решения
+        .description Подберем оптимальный вариант <br>для любого клиента
+        if link
+            a(href="javascript:;").catalog-link Перейти в каталог

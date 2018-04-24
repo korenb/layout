@@ -1,0 +1,11 @@
+
+- var categoryListItems = locals['categories']
+
+each item, index in categoryListItems
+    .category-item
+        .picture
+            img(src=item.image, alt='category '+index)
+        div
+            .category-item__title=item.title
+            .keywords!=item.keywords
+            a(href="javascript:;").link.details-link Подробнее
