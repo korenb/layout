@@ -1,7 +1,10 @@
 
 mixin breadcrumbs(items, cls)
     ul.breadcrumb(class=typeof cls == 'undefined' ? undefined : cls)
-        li.breadcrumb__item
-            a(href="javascript:;") Главная
-        li.breadcrumb__item.breadcrumb__item_separator >
-        .breadcrumb__item.breadcrumb__item_active Каталог
+        each item, index in items
+            if index + 1 != items.length
+                li.breadcrumb__item
+                    a(href="javascript:;")=item
+                li.breadcrumb__item.breadcrumb__item_separator >
+            else
+                .breadcrumb__item.breadcrumb__item_active=item

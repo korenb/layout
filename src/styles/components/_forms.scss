@@ -1,0 +1,26 @@
+$checkbox-text-color: $body-color;
+.checkbox {
+    display: inline-block;
+    @include size(20px);
+    border-radius: 2px;
+    border: 1px solid $gray-400;
+    background-color: $gray-300;
+    &__text {
+        font-size: 1.25rem;
+        line-height: 1;
+        color: $checkbox-text-color;
+    }
+    &.checked {
+        background-color: $green-light;
+        border: none;
+        &::after {
+            content: '✓';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 900;
+        }
+    }
+}

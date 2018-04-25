@@ -96,11 +96,12 @@ gulp.task('pages', function buildHTML() {
 });
 
 // watch tasks
+var watchDelay = 2000;
 
 gulp.task('watch-styles', function () {
-    return gulp.watch('./src/**/*.scss', gulp.series('compile:scss'));
+    return gulp.watch('./src/**/*.scss', { delay: watchDelay }, gulp.series('compile:scss'));
 });
 gulp.task('watch-pug', function () {
-    return gulp.watch('./src/views/**/*.pug', gulp.series('pages'));
+    return gulp.watch('./src/views/**/*.pug', { delay: watchDelay }, gulp.series('pages'));
 });
 gulp.task('watch', gulp.parallel(['watch-styles', 'watch-pug']));

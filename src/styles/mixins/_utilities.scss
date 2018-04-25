@@ -1,28 +1,41 @@
-
-
-.text-center{
+.text-center {
     text-align: center;
 }
 
-
-@mixin position-relative{
+@mixin position-relative {
     position: relative !important;
 }
 
-@mixin position-absolute{
+@mixin position-absolute {
     position: absolute !important;
 }
-@mixin h100{
+
+@mixin h100 {
     height: 100%;
 }
-@mixin w100{
-width: 100%;
+
+@mixin w100 {
+    width: 100%;
 }
-@mixin pointer{
+
+@mixin pointer {
     cursor: pointer;
 }
 
-@mixin mx($val){
+@mixin mx($val, $right: null) {
     margin-left: $val;
-    margin-right: $val;
+    @if $right == null {
+        margin-right: $val;
+    } @else {
+        margin-right: $right;
+    }
+}
+
+@mixin px($val, $right: null) {
+    padding-left: $val;
+    @if $right==null {
+        padding-right: $val;
+    } @else {
+        padding-right: $right;
+    }
 }

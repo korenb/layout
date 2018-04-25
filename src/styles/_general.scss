@@ -3,9 +3,14 @@
 @import 'components/about-company';
 @import 'components/stats';
 @import 'components/feedback';
+@import 'components/forms';
 
 .d-none, .hidden, [hidden]{
     display: none;
+}
+
+.page-container{
+    position: relative;
 }
 
 .main-content {
@@ -30,6 +35,13 @@
             padding-top: 8px;
             padding-bottom: 61px;
         }
+    }
+    &_bg_category{
+        background-image: url('/images/category-bg.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-top: 240px;
+        padding-bottom: 240px;
     }
 
     &__title,
@@ -58,8 +70,8 @@
         padding-bottom: 122px;
     }
 
-    .page-container{
-        position: relative;
+    &__sale-card{
+        margin: 0 2rem 2rem 2rem;
     }
     &__sale {
         margin-bottom: 22.5px;
@@ -133,5 +145,11 @@
         svg.circles{
             display: none;
         }
+    }
+
+    /* columns */
+    &__category-menu-col{
+        @include make-col-ready();
+        width: 313px + $grid-gutter-width;
     }
 }

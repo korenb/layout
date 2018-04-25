@@ -1,0 +1,50 @@
+$accordion-item-offset: 28px;
+$accordion-headings-text-color: $body-color;
+.accordion {
+    background-color: $white;
+    padding: 10px 15px 10px 12px;
+    &__item {
+        margin-top: $accordion-item-offset / 2;
+        padding-bottom: $accordion-item-offset / 2;
+        border-bottom: 1px solid $gray-300;
+        text-transform: uppercase;
+        color: $accordion-headings-text-color;
+        font-size: 1.188rem;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    &__item.opened &__caret#{&}__caret_up {
+        display: flex;
+    }
+    &__item.opened &__caret#{&}__caret_down {
+        display: none;
+    }
+    &__caret {
+        height: .6rem;
+        display: none;
+        &>svg {
+            fill: $accordion-headings-text-color;
+        }
+        &_down {
+            display: flex;
+        }
+    }
+    &__item-content {
+        /* TODO: move, cause it's not part of accordion */
+        margin-top: $accordion-item-offset / 2;
+        padding-bottom: $accordion-item-offset / 2;
+        border-bottom: 1px solid $gray-300;
+        display: flex;
+        &_checkboxes {
+            flex-direction: column;
+            & > *:not(:last-child) {
+                margin-bottom: 18px;
+            }
+        }
+    }
+}

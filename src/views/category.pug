@@ -1,0 +1,21 @@
+extends shared/layout
+
+block content
+    include shared/_category-menu
+
+    main.main-content.main-content_bg_category
+        .main-content__vectors
+            include svg/dec-circles.svg
+
+        .page-container
+            .title.title_brown.main-content__title
+                | Погонажная продукция
+
+            +breadcrumbs(['Главная', 'Каталог', 'Погонажная продукция'], 'main-content__breadcrumb')
+
+            .main-content__sale-card
+                +sale-card
+
+            .row
+                .main-content__category-menu-col
+                    +category-menu

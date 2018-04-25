@@ -1,0 +1,5 @@
+
+mixin checkbox(text, checked, cls)
+    div.checkbox-wrapper(class=typeof cls === 'undefined' ? undefined : cls)
+        .checkbox.mr-3(class=checked == true ? 'checked' : undefined)
+        .checkbox__text=text

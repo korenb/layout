@@ -1,0 +1,21 @@
+- var categories = locals['categories']
+
+mixin category-menu
+    .accordion
+        each cat in categories
+            .accordion__item(class=cat.title == 'Погонажная продукция' ? 'opened' : undefined)
+                div=cat.title
+                .accordion__caret.accordion__caret_down.ml-2
+                    include ../svg/angle-down.svg
+                .accordion__caret.accordion__caret_up.ml-2
+                    include ../svg/angle-up.svg
+            if cat.title == 'Погонажная продукция'
+                .accordion__item-content.accordion__item-content_checkboxes
+                    +checkbox('Вагонка штиль', false, 'd-flex')
+                    +checkbox('Евровагонка', true, 'd-flex')
+                    +checkbox('Палубная и террасная доска', false, 'd-flex')
+                    +checkbox('Фальш-брус', false, 'd-flex')
+                    +checkbox('Блок-хаус', false, 'd-flex')
+                    +checkbox('Шкунт', false, 'd-flex')
+                    +checkbox('Полог для бань', false, 'd-flex')
+                    +checkbox('Финишный погонаж', false, 'd-flex')
