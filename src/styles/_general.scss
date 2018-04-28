@@ -150,6 +150,12 @@
     /* columns */
     &__category-menu-col{
         @include make-col-ready();
-        width: 313px + $grid-gutter-width;
+        flex: 0 0 313px + $grid-gutter-width;
+    }
+    &__product-col{
+        @include make-col-ready();
+        background-color: $white;
+        flex: 1 0 0;
+        align-self: flex-start;
     }
 }

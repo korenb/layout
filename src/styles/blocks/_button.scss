@@ -8,6 +8,10 @@
     @include hover{
         color: $white;
     }
+    &_outline#{&}_hover:hover{
+        color: $white;
+        background-color: $green;
+    }
     &_outline{
         color: $green;
         background-color: $white;

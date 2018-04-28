@@ -11,11 +11,9 @@ mixin category-menu
                     include ../svg/angle-up.svg
             if cat.title == 'Погонажная продукция'
                 .accordion__item-content.accordion__item-content_checkboxes
-                    +checkbox('Вагонка штиль', false, 'd-flex')
-                    +checkbox('Евровагонка', true, 'd-flex')
-                    +checkbox('Палубная и террасная доска', false, 'd-flex')
-                    +checkbox('Фальш-брус', false, 'd-flex')
-                    +checkbox('Блок-хаус', false, 'd-flex')
-                    +checkbox('Шкунт', false, 'd-flex')
-                    +checkbox('Полог для бань', false, 'd-flex')
-                    +checkbox('Финишный погонаж', false, 'd-flex')
+                    if cat.sub && cat.sub.length
+                        each subcat in cat.sub
+                            +checkbox(subcat.title, subcat.active, 'd-flex')
+                    else
+                        div Нет подкатегорий
+                        

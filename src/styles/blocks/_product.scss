@@ -1,0 +1,59 @@
+.product {
+    display: flex;
+    &__image>img {
+        @include size(300px, 166px);
+        @include mx(-$grid-gutter-width / 2, $grid-gutter-width / 2);
+    }
+    &__info {
+        flex: 1;
+        margin-right: 2rem;
+    }
+    &__title {
+        color: $body-color;
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+    &__params {
+        @include reset-list;
+        color: $muted;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        grid-gap: 5px;
+        margin-bottom: 1rem;
+    }
+    &__prices {
+        @include reset-list;
+        margin-top: 2rem;
+    }
+    &__price{
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $green;
+        line-height: 1.563;
+    }
+}
+
+.product-calculator{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__separator{
+        background-color: $gray-300;
+        width: 1px;
+        align-self: stretch;
+    }
+    &__count{
+        width: 173px;
+    }
+    &__summary{
+        color: $muted;
+        text-align: center;
+        & > strong{
+            display: block;
+            font-size: 1.25rem;
+            color: $green;
+            font-weight: 700;
+        }
+    }
+}

@@ -28,27 +28,14 @@
 
         .form-control{
             margin-bottom: 20px;
-            border-radius: 18px;
-            @include F-ProximaNova(400);
-            font-size: 1.063rem;
-            line-height: 1.25rem;
-            padding: 15px 25px 12px 25px;
-            color: #555555;
-            outline: none;
-            @include border(1px, rgba(85,85,85,.2));
-            @include placeholder-color(rgba(85,85,85,.2));
         }
-        textarea.form-control{
-            height: 100px;
-            resize: none;
-        }
+
         button{
             padding: 6.5px 31px 8px 31px;
             background-color: #5e472a;
             color: #ffffff;
             border-radius: 10px;
             text-align: center;
-            @include F-ProximaNova(400);
             font-size: 1.25rem;
             line-height: 1.813rem;
             outline: none;

@@ -1,0 +1,45 @@
+extends shared/layout
+
+block content
+    include shared/_category-menu
+
+    main.main-content
+        .main-content__vectors
+            include svg/leaves1.svg
+            include svg/leaves2.svg
+
+        .page-container
+
+            +breadcrumbs(['Главная', 'Каталог', 'Погонажная продукция', 'Евровагонка (Сосна)'], 'main-content__breadcrumb')
+
+            .main-content__sale-card
+                +sale-card
+
+            .row
+                .main-content__category-menu-col
+                    +category-menu
+                .main-content__product-col
+                    .product.pt-4
+                        .product__image
+                            img(src="/images/products/p1.png", alt="")
+                        .product__info
+                            h3.product__title.pt-1 Евровагонка (ЕВ)
+                            ul.product__params
+                                li Толщина: <strong>12.5 мм</strong>
+                                li Ширина: <strong>90 мм</strong>
+                                li Длина: <strong>2500 мм</strong>
+                                li Материал: <strong>Сосна</strong>
+                                li Сорт: <strong>AB</strong>
+                            p.product__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis sagittis ex et interdum. Aliquam ultricies sit amet elit vel porttitor.
+                        ul.product__prices
+                            li.product__price 245 ₽ /м<sup>2</sup>
+                            li.product__price 54.5 ₽ /шт
+                    .product-calculator.py-5
+                        .product-calculator__measure-selector soon
+                        .product-calculator__separator.my-1
+                        .product__price 245 ₽ /м<sup>2</sup>
+                        .product-calculator__count
+                            input(type="text" placeholder="Количество").form-control.text-center.w-100
+                        .product-calculator__summary Сумма к оплате:<strong>0 ₽</strong>
+                        a(href="javascript:;").btn.btn_outline.btn_hover В корзину
+

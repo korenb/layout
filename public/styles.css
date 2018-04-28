@@ -2587,6 +2587,42 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: transparent;
   border: 0; }
 
+.w-25 {
+  width: 25% !important; }
+
+.w-50 {
+  width: 50% !important; }
+
+.w-75 {
+  width: 75% !important; }
+
+.w-100 {
+  width: 100% !important; }
+
+.w-auto {
+  width: auto !important; }
+
+.h-25 {
+  height: 25% !important; }
+
+.h-50 {
+  height: 50% !important; }
+
+.h-75 {
+  height: 75% !important; }
+
+.h-100 {
+  height: 100% !important; }
+
+.h-auto {
+  height: auto !important; }
+
+.mw-100 {
+  max-width: 100% !important; }
+
+.mh-100 {
+  max-height: 100% !important; }
+
 .text-center {
   text-align: center; }
 
@@ -2626,6 +2662,9 @@ svg {
   line-height: 1.25; }
   .btn:hover {
     color: #fff; }
+  .btn_outline.btn_hover:hover {
+    color: #fff;
+    background-color: #4a801e; }
   .btn_outline {
     color: #4a801e;
     background-color: #fff;
@@ -2941,6 +2980,11 @@ svg {
     align-items: center; }
     .accordion__item:last-child {
       border-bottom: none; }
+  .accordion__item.opened, .accordion__item:hover {
+    color: #4a801e;
+    text-decoration: underline; }
+  .accordion__item:hover {
+    cursor: pointer; }
   .accordion__item.opened .accordion__caret.accordion__caret_up {
     display: flex; }
   .accordion__item.opened .accordion__caret.accordion__caret_down {
@@ -2952,16 +2996,74 @@ svg {
       fill: #555; }
     .accordion__caret_down {
       display: flex; }
+  .accordion__item.opened .accordion__caret > svg,
+  .accordion__item:hover .accordion__caret > svg {
+    fill: #4a801e; }
   .accordion__item-content {
     /* TODO: move, cause it's not part of accordion */
     margin-top: 14px;
     padding-bottom: 14px;
+    padding-left: 5px;
     border-bottom: 1px solid #eeeeee;
     display: flex; }
     .accordion__item-content_checkboxes {
+      color: #555;
       flex-direction: column; }
       .accordion__item-content_checkboxes > *:not(:last-child) {
         margin-bottom: 18px; }
+
+.product {
+  display: flex; }
+  .product__image > img {
+    width: 300px;
+    height: 166px;
+    margin-left: -15px;
+    margin-right: 15px; }
+  .product__info {
+    flex: 1;
+    margin-right: 2rem; }
+  .product__title {
+    color: #555;
+    font-size: 1.25rem;
+    font-weight: 700; }
+  .product__params {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #a4a4a4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-gap: 5px;
+    margin-bottom: 1rem; }
+  .product__prices {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem; }
+  .product__price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #4a801e;
+    line-height: 1.563; }
+
+.product-calculator {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .product-calculator__separator {
+    background-color: #eeeeee;
+    width: 1px;
+    align-self: stretch; }
+  .product-calculator__count {
+    width: 173px; }
+  .product-calculator__summary {
+    color: #a4a4a4;
+    text-align: center; }
+    .product-calculator__summary > strong {
+      display: block;
+      font-size: 1.25rem;
+      color: #4a801e;
+      font-weight: 700; }
 
 svg.logo {
   height: 100%; }
@@ -3212,38 +3314,13 @@ svg.logo {
   border-radius: 23px;
   box-shadow: 0px 0px 100px -15px rgba(0, 0, 0, 0.75); }
   .feedback form .form-control {
-    margin-bottom: 20px;
-    border-radius: 18px;
-    font-family: 'Proxima Nova';
-    font-weight: 400;
-    font-size: 1.063rem;
-    line-height: 1.25rem;
-    padding: 15px 25px 12px 25px;
-    color: #555555;
-    outline: none;
-    border: 1px solid rgba(85, 85, 85, 0.2); }
-    .feedback form .form-control::-webkit-input-placeholder {
-      color: rgba(85, 85, 85, 0.2); }
-    .feedback form .form-control:-moz-placeholder {
-      /* FF 4-18 */
-      color: rgba(85, 85, 85, 0.2); }
-    .feedback form .form-control::-moz-placeholder {
-      /* FF 19+ */
-      color: rgba(85, 85, 85, 0.2); }
-    .feedback form .form-control:-ms-input-placeholder {
-      /* IE 10+ */
-      color: rgba(85, 85, 85, 0.2); }
-  .feedback form textarea.form-control {
-    height: 100px;
-    resize: none; }
+    margin-bottom: 20px; }
   .feedback form button {
     padding: 6.5px 31px 8px 31px;
     background-color: #5e472a;
     color: #ffffff;
     border-radius: 10px;
     text-align: center;
-    font-family: 'Proxima Nova';
-    font-weight: 400;
     font-size: 1.25rem;
     line-height: 1.813rem;
     outline: none;
@@ -3259,8 +3336,7 @@ svg.logo {
   background-color: #eeeeee; }
   .checkbox__text {
     font-size: 1.25rem;
-    line-height: 1;
-    color: #555; }
+    line-height: 1; }
   .checkbox.checked {
     background-color: #a7ca00;
     border: none; }
@@ -3272,6 +3348,32 @@ svg.logo {
       color: #fff;
       font-size: 1.25rem;
       font-weight: 900; }
+
+.form-control {
+  border-radius: 18px;
+  font-family: 'Proxima Nova';
+  font-weight: 400;
+  font-size: 1.063rem;
+  line-height: 1.25rem;
+  padding: 15px 25px 12px 25px;
+  color: #555555;
+  outline: none;
+  border: 1px solid rgba(85, 85, 85, 0.2); }
+  .form-control::-webkit-input-placeholder {
+    color: rgba(85, 85, 85, 0.2); }
+  .form-control:-moz-placeholder {
+    /* FF 4-18 */
+    color: rgba(85, 85, 85, 0.2); }
+  .form-control::-moz-placeholder {
+    /* FF 19+ */
+    color: rgba(85, 85, 85, 0.2); }
+  .form-control:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(85, 85, 85, 0.2); }
+
+textarea.form-control {
+  height: 100px;
+  resize: none; }
 
 .d-none, .hidden, [hidden] {
   display: none; }
@@ -3379,7 +3481,16 @@ svg.logo {
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-    width: 343px; }
+    flex: 0 0 343px; }
+  .main-content__product-col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: #fff;
+    flex: 1 0 0;
+    align-self: flex-start; }
 
 .contacts-wrapper {
   background-image: url("/images/contact-bg.png");

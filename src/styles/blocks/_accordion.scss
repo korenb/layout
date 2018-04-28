@@ -1,5 +1,6 @@
 $accordion-item-offset: 28px;
 $accordion-headings-text-color: $body-color;
+$accordion-headings-text-color--active: $green;
 .accordion {
     background-color: $white;
     padding: 10px 15px 10px 12px;
@@ -18,6 +19,14 @@ $accordion-headings-text-color: $body-color;
             border-bottom: none;
         }
     }
+    &__item.opened,
+    &__item:hover {
+        color: $accordion-headings-text-color--active;
+        text-decoration: underline;
+    }
+    &__item:hover {
+        cursor: pointer;
+    }
     &__item.opened &__caret#{&}__caret_up {
         display: flex;
     }
@@ -34,15 +43,23 @@ $accordion-headings-text-color: $body-color;
             display: flex;
         }
     }
+    &__item.opened &__caret,
+    &__item:hover &__caret {
+        &>svg {
+            fill: $accordion-headings-text-color--active;
+        }
+    }
     &__item-content {
         /* TODO: move, cause it's not part of accordion */
         margin-top: $accordion-item-offset / 2;
         padding-bottom: $accordion-item-offset / 2;
+        padding-left: 5px;
         border-bottom: 1px solid $gray-300;
         display: flex;
         &_checkboxes {
+            color: $body-color;
             flex-direction: column;
-            & > *:not(:last-child) {
+            &>*:not(:last-child) {
                 margin-bottom: 18px;
             }
         }

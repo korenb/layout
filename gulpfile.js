@@ -24,7 +24,40 @@ gulp.task('pages', function buildHTML() {
                 categories: [{
                         image: '/images/category-pictures/1.png',
                         title: 'Погонажная продукция',
-                        keywords: 'Вагонка штиль; Евровагонка; Фальш-брус Блок-хаус; Палубная и террасная доска; Финишный погонаж'
+                        keywords: 'Вагонка штиль; Евровагонка; Фальш-брус Блок-хаус; Палубная и террасная доска; Финишный погонаж',
+                        sub: [{
+                                title: 'Вагонка штиль',
+                                active: false
+                            },
+                            {
+                                title: 'Евровагонка',
+                                active: true
+                            },
+                            {
+                                title: 'Палубная и террасная доска',
+                                active: false
+                            },
+                            {
+                                title: 'Фальш-брус',
+                                active: false
+                            },
+                            {
+                                title: 'Блок-хаус',
+                                active: false
+                            },
+                            {
+                                title: 'Шкунт',
+                                active: false
+                            },
+                            {
+                                title: 'Полог для бань',
+                                active: false
+                            },
+                            {
+                                title: 'Финишный погонаж',
+                                active: false
+                            }
+                        ]
                     },
                     {
                         image: '/images/category-pictures/2.png',
@@ -99,9 +132,13 @@ gulp.task('pages', function buildHTML() {
 var watchDelay = 2000;
 
 gulp.task('watch-styles', function () {
-    return gulp.watch('./src/**/*.scss', { delay: watchDelay }, gulp.series('compile:scss'));
+    return gulp.watch('./src/**/*.scss', {
+        delay: watchDelay
+    }, gulp.series('compile:scss'));
 });
 gulp.task('watch-pug', function () {
-    return gulp.watch('./src/views/**/*.pug', { delay: watchDelay }, gulp.series('pages'));
+    return gulp.watch('./src/views/**/*.pug', {
+        delay: watchDelay
+    }, gulp.series('pages'));
 });
 gulp.task('watch', gulp.parallel(['watch-styles', 'watch-pug']));
