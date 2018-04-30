@@ -20,7 +20,7 @@ block content
                     +category-menu
                 .main-content__product-col
                     .product.pt-4
-                        .product__image
+                        .product__image.product__image_offset
                             img(src="/images/products/p1.png", alt="")
                         .product__info
                             h3.product__title.pt-1 Евровагонка (ЕВ)
@@ -34,7 +34,7 @@ block content
                         ul.product__prices
                             li.product__price 245 ₽ /м<sup>2</sup>
                             li.product__price 54.5 ₽ /шт
-                    .product-calculator.py-5
+                    .product-calculator.py-4-5
                         .product-calculator__measure-selector
                             +switcher(false, 'м<sup>2</sup>', 'шт')
                         .product-calculator__separator.my-1
@@ -43,4 +43,13 @@ block content
                             input(type="text" placeholder="Количество").form-control.text-center.w-100
                         .product-calculator__summary Сумма к оплате:<strong>0 ₽</strong>
                         a(href="javascript:;").btn.btn_outline.btn_hover В корзину
-
+                    .separator.separator_thin
+                    .similar-products
+                        .similar-products__caption.mt-4.mb-2
+                            | Вам также может подойти из категории: 
+                            a(href="javascript:;").similar-products__category-link Евровагонка
+                        - var n = 0;
+                        while n++ < 3
+                            include partials/product_mini
+                            .separator.separator_thin
+                        +breadcrumbs(['Главная', 'Каталог', 'Погонажная продукция', 'Евровагонка (Сосна)'], 'similar-products__breadcrumb my-4-5')

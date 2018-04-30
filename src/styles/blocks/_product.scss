@@ -2,7 +2,10 @@
     display: flex;
     &__image>img {
         @include size(300px, 166px);
-        @include mx(-$grid-gutter-width / 2, $grid-gutter-width / 2);
+        margin-right: $grid-gutter-width / 2;
+    }
+    &__image_offset>img {
+        margin-left: -$grid-gutter-width / 2;
     }
     &__info {
         flex: 1;
@@ -31,6 +34,21 @@
         color: $green;
         line-height: 1.563;
     }
+    &__link{
+        line-height: 1;
+        @include color($green); 
+        text-decoration: underline;
+    }
+    &_mini &__prices{
+        margin-top: 0;
+        align-self: center;
+    }
+    &_mini &__image>img{
+        @include size(107px);
+    }
+    &_mini &__info{
+        align-self: center;
+    }
 }
 
 .product-calculator{
@@ -55,5 +73,25 @@
             color: $green;
             font-weight: 700;
         }
+    }
+}
+
+.similar-products{
+    &__caption{
+        font-size: 1.25rem;
+    }
+    &__category-link{
+        display: inline-block;
+        border-bottom: 1px solid;
+        font-weight: 700;
+        line-height: 1;
+        @include color($green);
+    }
+    &__product{
+        margin-top: 25px;
+        margin-bottom: 35px;
+    }
+    &__breadcrumb{
+        justify-content: center;
     }
 }
