@@ -1,0 +1,10 @@
+
+mixin switcher(active, ...options)
+    .switcher-container
+        if options && options.length > 0
+        .switcher__option!=options[0]
+        .switcher(class=active == true ? 'active' : undefined)
+            .switcher__lever
+            .input(type="checkbox")
+        if options && options.length > 1
+            .switcher__option!=options[1]

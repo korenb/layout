@@ -24,18 +24,62 @@ $checkbox-text-color: $body-color;
     }
 }
 
-.form-control{
-    border-radius: 18px;
+.switcher {
+    $size-h: 28px;
+    $size-w: 64px;
+    $lever-size: 30px;
+    // ============
+    position: relative;
+    border: 1px solid #b7b7b7;
+    background: linear-gradient(to bottom, #2b2b2b, #4e4e4e);
+    box-shadow: 0 1px 3px #dfdfdf;
+    border-radius: $fully-rounded-size;
+    @include size($size-w, $size-h);
+    &-container {
+        display: flex;
+        align-items: center;
+    }
+    &__lever {
+        position: absolute;
+        @include size($lever-size);
+        background: linear-gradient(to bottom, #d4d4d4, #ececec);
+        box-shadow: 0 1px 3px 0px #aaa, inset 0 1px 1px #fff;
+        border-radius: $fully-rounded-size;
+        right: -2px;
+        top: -2px;
+        transition: right .35s ease;
+    }
+    &.active{
+        background: linear-gradient(to bottom, #91af00, #a7ca00);
+    }
+    &.active &__lever{
+        right: calc(100% - 30px + 2px);
+    }
+    &__option {
+        color: $muted;
+    }
+    &__option+&,
+    &+&__option {
+        margin-left: 10px;
+    }
+    input[type="checkbox"] {
+        display: none;
+    }
+}
+
+.form-control {
+    border-radius: 20px;
     @include F-ProximaNova(400);
     font-size: 1.063rem;
     line-height: 1.25rem;
-    padding: 15px 25px 12px 25px;
+    padding: 11px 25px 11px 25px;
     color: #555555;
     outline: none;
-    @include border(1px, rgba(85,85,85,.2));
-    @include placeholder-color(rgba(85,85,85,.2));
+    @include border(1px, rgba(85, 85, 85, .2));
+    @include placeholder-color(rgba(85, 85, 85, .2));
 }
-textarea.form-control{
+
+textarea.form-control {
     height: 100px;
     resize: none;
 }

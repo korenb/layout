@@ -35,7 +35,8 @@ block content
                             li.product__price 245 ₽ /м<sup>2</sup>
                             li.product__price 54.5 ₽ /шт
                     .product-calculator.py-5
-                        .product-calculator__measure-selector soon
+                        .product-calculator__measure-selector
+                            +switcher(false, 'м<sup>2</sup>', 'шт')
                         .product-calculator__separator.my-1
                         .product__price 245 ₽ /м<sup>2</sup>
                         .product-calculator__count

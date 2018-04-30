@@ -3349,13 +3349,46 @@ svg.logo {
       font-size: 1.25rem;
       font-weight: 900; }
 
+.switcher {
+  position: relative;
+  border: 1px solid #b7b7b7;
+  background: linear-gradient(to bottom, #2b2b2b, #4e4e4e);
+  box-shadow: 0 1px 3px #dfdfdf;
+  border-radius: 500px;
+  width: 64px;
+  height: 28px; }
+  .switcher-container {
+    display: flex;
+    align-items: center; }
+  .switcher__lever {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, #d4d4d4, #ececec);
+    box-shadow: 0 1px 3px 0px #aaa, inset 0 1px 1px #fff;
+    border-radius: 500px;
+    right: -2px;
+    top: -2px;
+    transition: right .35s ease; }
+  .switcher.active {
+    background: linear-gradient(to bottom, #91af00, #a7ca00); }
+  .switcher.active .switcher__lever {
+    right: calc(100% - 30px + 2px); }
+  .switcher__option {
+    color: #a4a4a4; }
+  .switcher__option + .switcher,
+  .switcher + .switcher__option {
+    margin-left: 10px; }
+  .switcher input[type="checkbox"] {
+    display: none; }
+
 .form-control {
-  border-radius: 18px;
+  border-radius: 20px;
   font-family: 'Proxima Nova';
   font-weight: 400;
   font-size: 1.063rem;
   line-height: 1.25rem;
-  padding: 15px 25px 12px 25px;
+  padding: 11px 25px 11px 25px;
   color: #555555;
   outline: none;
   border: 1px solid rgba(85, 85, 85, 0.2); }
