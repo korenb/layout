@@ -1,0 +1,13 @@
+.company-description{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 125px;
+    align-items: center;
+    svg.logo{
+        height: 265px;
+    }
+    p{
+        color: $green;
+        font-size: 1.25rem;
+    }
+}

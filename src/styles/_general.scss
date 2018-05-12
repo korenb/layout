@@ -1,6 +1,7 @@
 @import 'components/categories';
 @import 'components/solutions';
 @import 'components/about-company';
+@import 'components/company-description';
 @import 'components/stats';
 @import 'components/feedback';
 @import 'components/forms';
@@ -144,6 +145,25 @@
         }
         svg.circles{
             display: none;
+        }
+    }
+    &_about-page &__vectors{
+        svg.leaves1{
+            top: 515px;
+            left: -130px;
+        }
+        svg.leaves2{
+            transform: scale(1, -1) rotate(-67deg);
+            top: 1000px;
+            right: -120px;
+        }
+        svg.leaves3{
+            display: none;
+        }
+        svg.circles{
+            height: 958px;
+            left: -376px;
+            bottom: -329px;
         }
     }
 

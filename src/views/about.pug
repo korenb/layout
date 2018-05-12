@@ -1,0 +1,53 @@
+extends shared/layout
+
+block content
+    include shared/_category-menu
+
+    main.main-content.main-content_about-page
+        .main-content__vectors
+            include svg/leaves1.svg
+            include svg/leaves2.svg
+            include svg/dec-circles.svg
+
+        .page-container
+
+            +breadcrumbs(['Главная', 'О нас'], 'main-content__breadcrumb')
+
+            div
+                +loud-title('Коротко о нас', true)
+
+            .about-features.about-features_shrink.mb-5
+                .feature-item
+                    .feature-item__image
+                    .feature-item__title 9 лет опыта в своей области
+                .feature-item
+                    .feature-item__image
+                    .feature-item__title Широкий ассортимент продукции и предложений
+                .feature-item
+                    .feature-item__image
+                    .feature-item__title Гибкий прайс-лист для каждого клиента
+                .feature-item
+                    .feature-item__image
+                    .feature-item__title Официальный диллер немецких масел «Leinos»
+
+            article
+                p.text-center.mb-5 Загляните к нам в <a href="javascript:;" class="link link_color_green font-weight-bold">каталог</a> и мы уверен, вы найдете для себя то, что вы искали.
+
+            div
+                +loud-title('Подробно о нас', true)
+
+            article.article-offset.my-5
+                p Наша команда занимается деревом уже на протяжении 9 лет. Мы постоянно расширяем свой ассортимент, стараясь привнести в Ваш дом что-то новое, натуральное, источающее тепло солнца.
+                p Дружеские отношения не только внутри коллектива, но и с нашими поставщиками, позволяют добиться отличных результатов в контроле качества продукции и сервиса.
+                p Наша компания предлагает широкий спектр высококачественных сухих строганных пиломатериалов из древесины разных сортов: сосна, ель, осина, лиственница, липа, кедр, пиломатериал естественной влажности, фанера, OSB, утеплитель и много другое.
+                p В наличии всегда огромный выбор изделий.
+                p Также мы являемся официальными дилерами немецких натуральных масел «LEINOS».
+
+            .company-description.mb-5
+                include svg/logo.svg
+                p Логотип компании <br>с небольшим описанием <br>смысловой нагрузки логотипа
+
+            div
+                +loud-title('Есть вопросы?', true, 'Нам важно, чтобы каждый клиент остался довольным. <br>Оставьте ваши контактные данные и наш специалист свяжется с вами.')
+
+            +feedback(false)

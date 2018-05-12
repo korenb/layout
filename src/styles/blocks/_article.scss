@@ -1,0 +1,8 @@
+article{
+    padding: 0 125px;
+    font-size: 1.25rem;
+    line-height: 1.813;
+    &.article-offset p{
+        text-indent: 1.5em;
+    }
+}

@@ -3,10 +3,14 @@
     &:hover {
         color: $brown;
     }
-    border-bottom: 1px solid;
     line-height: 1.563rem;
     &_hover:hover {
         color: $green;
+    }
+
+    text-decoration: underline;
+    &:hover{
+        text-decoration: underline;
     }
 
     &_lg{

@@ -18,10 +18,9 @@ block content
             .main-content__link-all-sales
                 a(href="javascript:;").link.link_hover Посмотреть все акции
 
+            div
+                +loud-title('Мы предлагаем', true)
             .categories
-                .suggestion-text.title.title_brown
-                    | Мы предлагаем
-                    .separator.separator_color_brown
                 include partials/categories
 
             +solutions('main-content__solutions', true)
