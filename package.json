@@ -11,6 +11,9 @@
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^3.1.0",
     "gulp-watch": "^5.0.0",
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.1",
+    "npm": "^6.4.0",
+    "to": "^0.2.9",
+    "update": "^0.7.4"
   }
 }
