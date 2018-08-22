@@ -7,11 +7,6 @@
             "type": "npm",
             "script": "start",
             "problemMatcher": []
-        },
-        {
-            "type": "gulp",
-            "task": "watch",
-            "problemMatcher": []
         }
     ]
 }

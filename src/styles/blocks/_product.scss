@@ -28,46 +28,48 @@
         @include reset-list;
         margin-top: 2rem;
     }
-    &__price{
+    &__price {
         font-size: 1.25rem;
         font-weight: 700;
         color: $green;
         line-height: 1.563;
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-end;
     }
-    &__link{
+    &__link {
         line-height: 1;
-        @include color($green); 
+        @include color($green);
         text-decoration: underline;
     }
-    &_mini &__prices{
+    &_mini &__prices {
         margin-top: 0;
         align-self: center;
     }
-    &_mini &__image>img{
+    &_mini &__image>img {
         @include size(107px);
     }
-    &_mini &__info{
+    &_mini &__info {
         align-self: center;
     }
 }
 
-.product-calculator{
+.product-calculator {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    &__separator{
+    &__separator {
         background-color: $gray-300;
         width: 1px;
         align-self: stretch;
     }
-    &__count{
+    &__count {
         width: 173px;
     }
-    &__summary{
+    &__summary {
         color: $muted;
         text-align: center;
-        & > strong{
+        &>strong {
             display: block;
             font-size: 1.25rem;
             color: $green;
@@ -76,22 +78,22 @@
     }
 }
 
-.similar-products{
-    &__caption{
+.similar-products {
+    &__caption {
         font-size: 1.25rem;
     }
-    &__category-link{
+    &__category-link {
         display: inline-block;
         border-bottom: 1px solid;
         font-weight: 700;
         line-height: 1;
         @include color($green);
     }
-    &__product{
+    &__product {
         margin-top: 25px;
         margin-bottom: 35px;
     }
-    &__breadcrumb{
+    &__breadcrumb {
         justify-content: center;
     }
 }

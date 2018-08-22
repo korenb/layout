@@ -1,0 +1,38 @@
+.category {
+    display: flex;
+    padding: 1rem;
+    background-color: $white;
+    &__image {
+        margin-left: 1rem;
+    }
+    &__image>img {
+        @include size(380px, 166px);
+    }
+    &__image_offset>img {
+        margin-right: -1rem;
+    }
+    &__info {}
+    &__title {
+        color: $green;
+        font-size: 2.313rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
+    }
+    &__description {
+        margin-bottom: 0;
+    }
+}
+
+.category-products{
+    margin-top: .5rem;
+    padding-top: 1.5rem;
+    @include px(1rem);
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+
+    &__sort{
+        margin-bottom: 1.5rem;
+    }
+}

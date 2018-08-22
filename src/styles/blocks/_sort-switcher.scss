@@ -2,6 +2,7 @@
     color: $muted;
     line-height: 1.563;
     &>a {
+        margin-left: 0.5rem;
         color: $green;
         @include hover{
             color: $green;

@@ -42,7 +42,7 @@
         background-repeat: no-repeat;
         background-size: contain;
         padding-top: 240px;
-        padding-bottom: 240px;
+        padding-bottom: 100px;
     }
 
     &__title,
@@ -177,5 +177,10 @@
         background-color: $white;
         flex: 1 0 0;
         align-self: flex-start;
+    }
+    &__category-col{
+        @include make-col-ready();
+        padding: 0;
+        flex: 1;
     }
 }

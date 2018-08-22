@@ -39,3 +39,21 @@
         padding-right: $right;
     }
 }
+
+@mixin my($val, $right: null) {
+    margin-top: $val;
+    @if $right == null {
+        margin-bottom: $val;
+    } @else {
+        margin-bottom: $right;
+    }
+}
+
+@mixin py($val, $right: null) {
+    padding-top: $val;
+    @if $right==null {
+        padding-bottom: $val;
+    } @else {
+        padding-bottom: $right;
+    }
+}

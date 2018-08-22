@@ -5,7 +5,7 @@
     }
     &__title{
         color: #4a801e;
-        margin-bottom: 1px;
+        margin-bottom: 1rem;
         @include F-ProximaNova(700);
         font-size: 2.313rem;
         line-height: 2.063rem;
@@ -15,6 +15,7 @@
         @include F-ProximaNova(400);
         font-size: 1.25rem;
         line-height: 1.563rem;
+        margin-bottom: 1rem;
     }
     .catalog-link{
         margin-top: 30px;

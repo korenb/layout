@@ -3096,6 +3096,7 @@ svg {
   color: #a4a4a4;
   line-height: 1.563; }
   .sort-switcher > a {
+    margin-left: 0.5rem;
     color: #4a801e;
     border-bottom: 1px solid; }
     .sort-switcher > a:hover {
@@ -3178,6 +3179,37 @@ svg {
       .accordion__item-content_checkboxes > *:not(:last-child) {
         margin-bottom: 18px; }
 
+.category {
+  display: flex;
+  padding: 1rem;
+  background-color: #fff; }
+  .category__image {
+    margin-left: 1rem; }
+  .category__image > img {
+    width: 380px;
+    height: 166px; }
+  .category__image_offset > img {
+    margin-right: -1rem; }
+  .category__title {
+    color: #4a801e;
+    font-size: 2.313rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem; }
+  .category__description {
+    margin-bottom: 0; }
+
+.category-products {
+  margin-top: .5rem;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column; }
+  .category-products__sort {
+    margin-bottom: 1.5rem; }
+
 .product {
   display: flex; }
   .product__image > img {
@@ -3211,7 +3243,10 @@ svg {
     font-size: 1.25rem;
     font-weight: 700;
     color: #4a801e;
-    line-height: 1.563; }
+    line-height: 1.563;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end; }
   .product__link {
     line-height: 1;
     color: #4a801e;
@@ -3466,7 +3501,7 @@ svg.logo {
     margin-bottom: 19px; }
   .solutions__title {
     color: #4a801e;
-    margin-bottom: 1px;
+    margin-bottom: 1rem;
     font-family: 'Proxima Nova';
     font-weight: 700;
     font-size: 2.313rem;
@@ -3476,7 +3511,8 @@ svg.logo {
     font-family: 'Proxima Nova';
     font-weight: 400;
     font-size: 1.25rem;
-    line-height: 1.563rem; }
+    line-height: 1.563rem;
+    margin-bottom: 1rem; }
   .solutions .catalog-link {
     margin-top: 30px;
     padding: 7px 22px;
@@ -3702,7 +3738,7 @@ textarea.form-control {
     background-repeat: no-repeat;
     background-size: contain;
     padding-top: 240px;
-    padding-bottom: 240px; }
+    padding-bottom: 100px; }
   .main-content__title, .main-content__subtitle {
     text-align: center; }
   .main-content__title {
@@ -3800,6 +3836,14 @@ textarea.form-control {
     background-color: #fff;
     flex: 1 0 0;
     align-self: flex-start; }
+  .main-content__category-col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding: 0;
+    flex: 1; }
 
 .contacts-wrapper {
   background-image: url("/images/contact-bg.png");

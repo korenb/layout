@@ -19,3 +19,20 @@ block content
             .row
                 .main-content__category-menu-col
                     +category-menu
+                .main-content__category-col
+                    .category
+                        .category__info
+                            h3.category__title Евровагонка
+                            p.category__description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis sagittis ex et interdum. Aliquam ultricies sit amet elit vel porttitor. Etiam eros odio, tempor sed ex id, sollicitudin fringilla est. Vivamus venenatis neque ac turpis fermentum, et egestas nunc feugiat.
+                        .category__image.category__image_offset
+                            img(src="/images/products/p1.png", alt="")
+                    .category-products
+                        .sort-switcher.category-products__sort
+                            | Сортировать:
+                            a(href="javascript:;") сначала старые
+                        .separator.separator_thin
+                        - var n = 0;
+                        while n++ < 7
+                            include partials/product_mini
+                            if n !== 7
+                                .separator.separator_thin
