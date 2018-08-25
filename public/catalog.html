@@ -254,8 +254,9 @@
                     v84.6h-22.3v-35.5h-32.3v35.5H3824V1673.2L3824,1673.2z M3922.7,1673.2h21.5v53.2l34.4-53.2h22v84.6h-21.5v-53.9l-34.9,53.9h-21.5
                     V1673.2L3922.7,1673.2z" />
 </svg></a>
-          <ul class="navigation-menu header__menu">
-            <div class="header__dec-circles"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3385.5 3385.5" class="circles">
+          <div class="header__menu-wrapper">
+            <div class="header__decor-wrapper">
+              <div class="header__dec-circles"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3385.5 3385.5" class="circles">
     <style type="text/css">
         .st-circle {
             fill-rule: evenodd;
@@ -292,14 +293,16 @@
             S1443.5,1241.4,1692.8,1241.4L1692.8,1241.4z M1692.8,1370.5c178,0,322.3,144.3,322.3,322.3c0,178-144.3,322.3-322.3,322.3
             c-178,0-322.3-144.3-322.3-322.3C1370.5,1514.8,1514.8,1370.5,1692.8,1370.5L1692.8,1370.5z" />
 </svg>
+              </div>
             </div>
-            <li class="navigation-menu__item"><a class="navigation-menu__link" href="javascript:;">О нас</a></li>
-            <li class="navigation-menu__item"><a class="navigation-menu__link" href="javascript:;">Акции</a></li>
-            <li class="navigation-menu__item navigation-menu__item_active"><a class="navigation-menu__link" href="javascript:;">Каталог</a></li>
-            <li class="navigation-menu__item"><a class="navigation-menu__link" href="javascript:;">Скачать прайс-лист</a></li>
-            <li class="navigation-menu__item"><a class="navigation-menu__link" href="javascript:;">Контакты</a></li>
-            <li class="navigation-menu__item"><a class="cart-icon" href="javascript:;">
-                <div class="cart-icon__svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <ul class="navigation-menu header__menu">
+              <li class="navigation-menu__item"><a class="navigation-menu__link" href="javascript:;">О нас</a></li>
+              <li class="navigation-menu__item"><a class="navigation-menu__link" href="javascript:;">Акции</a></li>
+              <li class="navigation-menu__item navigation-menu__item_active"><a class="navigation-menu__link" href="javascript:;">Каталог</a></li>
+              <li class="navigation-menu__item"><a class="navigation-menu__link" href="javascript:;">Скачать прайс-лист</a></li>
+              <li class="navigation-menu__item"><a class="navigation-menu__link" href="javascript:;">Контакты</a></li>
+              <li class="navigation-menu__item cart-preview__toggler"><a class="cart-icon" href="javascript:;">
+                  <div class="cart-icon__svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
     <style type="text/css">
         .st-cart {
             fill: #FFFFFF;
@@ -310,9 +313,39 @@
         h5.9c0.6,0,1.1-0.3,1.4-0.8l2.9-5.2C16,2.6,16,2.6,16,2.4c0-0.5-0.3-0.8-0.8-0.8H3.4L2.6,0H0z M12.8,12.8c-0.9,0-1.6,0.7-1.6,1.6
         c0,0.9,0.7,1.6,1.6,1.6s1.6-0.7,1.6-1.6C14.4,13.5,13.7,12.8,12.8,12.8L12.8,12.8z M12.8,12.8" />
 </svg>
+                  </div>
+                  <div class="cart-icon__counter hidden">1</div></a>
+                <div class="cart-preview">
+                  <div class="cart-preview__caption">Ваш заказ: 3 товара</div>
+                  <div class="cart-preview__goods">
+                    <div class="cart-preview__product">
+                      <div class="product-preview">
+                        <div class="product-preview__image"><img src="images/cart-product-preview.jpg"></div>
+                        <div class="product-preview__info">
+                          <div class="product-preview__title">Форточка банная (Стеклопакет)</div>
+                          <div class="product-preview__amount">1 шт</div>
+                        </div>
+                        <div class="product-preview__price">2 300 ₽</div>
+                      </div>
+                    </div>
+                    <div class="cart-preview__product">
+                      <div class="product-preview">
+                        <div class="product-preview__image"><img src="images/cart-product-preview.jpg"></div>
+                        <div class="product-preview__info">
+                          <div class="product-preview__title">Форточка банная (Стеклопакет)</div>
+                          <div class="product-preview__amount">1 шт</div>
+                        </div>
+                        <div class="product-preview__price">2 300 ₽</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-preview__more"><img src="images/cart-more.png">
+                    <div class="cart-preview__more-counter">1</div>
+                  </div><a class="cart-preview__link" href="javascript:;">Перейти в корзину</a>
                 </div>
-                <div class="cart-icon__counter hidden"></div></a></li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </header>
       <div class="category-menu-wrapper">

@@ -1,0 +1,29 @@
+.product-preview {
+    font-size: 1em;
+    display: flex;
+    &__image {
+        img{
+            @include size(2.5em);
+            border-radius: 50%;
+        }
+        margin-right: .5em;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    &__title {
+        font-weight: 700;
+        color: $body-color;
+    }
+    &__amount {
+        font-style: italic;
+        color: $muted;
+    }
+    &__price {
+        font-size: 1.25em;
+        font-weight: 700;
+        color: $green;
+    }
+}

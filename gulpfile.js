@@ -21,7 +21,8 @@ gulp.task('pages', function buildHTML() {
             pretty: true,
             verbose: true,
             locals: {
-                categories: [{
+                categories: [
+                    {
                         image: '/images/category-pictures/1.png',
                         title: 'Погонажная продукция',
                         keywords: 'Вагонка штиль; Евровагонка; Фальш-брус Блок-хаус; Палубная и террасная доска; Финишный погонаж',
@@ -85,7 +86,8 @@ gulp.task('pages', function buildHTML() {
                         keywords: 'Саморезы; Пена;<br> Огнебиозащита; Гвозди;'
                     }
                 ],
-                'header-pages': [{
+                'header-pages': [
+                    {
                         title: 'О нас'
                     },
                     {
@@ -102,7 +104,8 @@ gulp.task('pages', function buildHTML() {
                         title: 'Контакты'
                     },
                 ],
-                'category-menu-items': [{
+                'category-menu-items': [
+                    {
                         title: 'Погонажная продукция'
                     },
                     {
