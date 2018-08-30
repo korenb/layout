@@ -17,11 +17,7 @@
         font-weight: 700;
     }
     &__params {
-        @include reset-list;
-        color: $muted;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-        grid-gap: 5px;
+        @include product-params-flex;
         margin-bottom: 1rem;
     }
     &__prices {
@@ -78,22 +74,3 @@
     }
 }
 
-.similar-products {
-    &__caption {
-        font-size: 1.25rem;
-    }
-    &__category-link {
-        display: inline-block;
-        border-bottom: 1px solid;
-        font-weight: 700;
-        line-height: 1;
-        @include color($green);
-    }
-    &__product {
-        margin-top: 25px;
-        margin-bottom: 35px;
-    }
-    &__breadcrumb {
-        justify-content: center;
-    }
-}

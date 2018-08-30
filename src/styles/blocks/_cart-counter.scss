@@ -1,0 +1,31 @@
+.cart-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__btn {
+        border-radius: 50%;
+        @include size(1.5rem);
+        line-height: 1.5;
+        font-size: 2rem;
+        background: linear-gradient(to bottom, $gray-300, $gray-500);
+        text-align: center;
+        cursor: pointer;
+        &:first-of-type {
+            margin-right: 1rem;
+            line-height: 1.35rem;
+        }
+        &:last-of-type {
+            margin-left: 1rem;
+            line-height: 1.65rem;
+        }
+    }
+    &__input {
+        text-align: center;
+        padding: 0.6rem .5rem;
+        border-radius: 500px;
+        outline: none;
+        border: none;
+        box-shadow: 0 1px 1px 1px $gray-500, inset 0 1px 1px 0px $gray-500;
+        width: 50%;
+    }
+}

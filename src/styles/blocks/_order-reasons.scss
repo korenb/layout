@@ -1,0 +1,11 @@
+.order-reasons {
+    background-color: $white;
+    padding: 2rem;
+    &__actions{
+        display: flex;
+        justify-content: center;
+        .btn:first-child{
+            margin-right: 5rem;
+        }
+    }
+}

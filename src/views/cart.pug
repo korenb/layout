@@ -3,25 +3,44 @@ extends shared/layout
 block content
     include shared/_category-menu
 
-    main.main-content.main-content_bg_catalog
+    main.main-content
         .main-content__vectors
             include svg/leaves1.svg
             include svg/leaves2.svg
 
         .page-container
-            .title.title_brown.main-content__title
-                | Каталог продукцииs
-            p.subtitle.main-content__subtitle
-                | Если вы не найдете подходящий для вас вариант продукции,<br>
-                | свяжитесь с нами и мы обязательно решим ваш вопрос
-            .main-content__btn.text-center
-                a.btn.btn_brown.btn_lg(href="javascript:;") Заказать звонок
 
-            +breadcrumbs(['Главная', 'Каталог'], 'main-content__breadcrumb')
+            +breadcrumbs(['Главная', 'Корзина'], 'main-content__breadcrumb')
 
-            .categories
-                include partials/categories
+            .cart-page
+                .cart-page__head
+                    .cart-page__title Корзина
+                    .cart-page__sub-title Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis sagittis ex et interdum. 
 
-            +solutions('main-content__solutions')
+                .cart-page__summary-text ВАШ ЗАКАЗ: 3 товара на сумму 5 750
 
-            +feedback
+                .cart-product-list
+                    .cart-product-list__item
+                        include partials/cart-product
+                    .cart-product-list__item
+                        include partials/cart-product
+                    .cart-product-list__item
+                        include partials/cart-product
+
+                .cart-page__summary-block
+                    .cart-page__summary-text ИТОГО: 5 750 ₽
+                    button.btn.btn_brown.cart-page__order-btn(type="button") Оформить заказ
+            
+            .similar-products.similar-products_solo
+                div.mb-4 Также обратите внимание на товары и акции, которые могут вас заинтересовать:
+                +sale-card('similar-products__sale')
+                include partials/product_mini
+                .separator.separator_thin
+                include partials/product_mini
+
+            .order-reasons
+                +loud-title('Почему стоит заказать у нас', true)
+                include partials/about-features
+                .order-reasons__actions
+                    a.btn.btn_lg(href="javascript:;") Подробнее о нас
+                    a.btn.btn_lg.btn_brown(href="javascript:;") Оформить заказ

@@ -1,0 +1,29 @@
+.cart-page {
+    @include py(2.5rem);
+    @include px(2rem);
+    background-color: $white;
+    margin-bottom: 2rem;
+    &__head{
+        border-bottom: 1px solid $gray-300;
+        margin-bottom: 2rem;
+    }
+    &__title {
+        @include page-title;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+    &__sub-title {
+        margin-bottom: 1.5rem;
+    }
+    &__summary-text{
+        @include page-title;
+    }
+    .cart-product-list{
+        margin-top: 1rem;
+    }
+    &__summary-block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

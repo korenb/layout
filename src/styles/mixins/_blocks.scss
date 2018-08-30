@@ -1,0 +1,29 @@
+@mixin page-title {
+    font-weight: 700;
+    font-size: 2.313rem;
+    color: $green;
+}
+
+@mixin text-green($fs: 1rem) {
+    color: $green;
+    font-size: $fs;
+    font-weight: 700;
+}
+
+@mixin product-params {
+    @include reset-list;
+    color: $muted;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-gap: 5px;
+}
+
+@mixin product-params-flex {
+    @include reset-list;
+    color: $muted;
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        margin-right: 5px;
+    }
+}

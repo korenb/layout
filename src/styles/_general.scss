@@ -5,12 +5,13 @@
 @import 'components/stats';
 @import 'components/feedback';
 @import 'components/forms';
-
-.d-none, .hidden, [hidden]{
+.d-none,
+.hidden,
+[hidden] {
     display: none;
 }
 
-.page-container{
+.page-container {
     position: relative;
 }
 
@@ -21,57 +22,50 @@
     padding-bottom: 87px;
     position: relative;
     overflow: hidden;
-    &_bg_promo{
+    &_bg_promo {
         background: url('/images/promo-bg.png') no-repeat;
         background-size: contain;
         padding-top: 240px;
         padding-bottom: 240px;
     }
-    &_bg_catalog{
+    &_bg_catalog {
         background: url('/images/catalog-bg.png') no-repeat;
         background-size: contain;
         padding-top: 240px;
         padding-bottom: 66px;
-        #{$q}__solutions{
+        #{$q}__solutions {
             padding-top: 8px;
             padding-bottom: 61px;
         }
     }
-    &_bg_category{
+    &_bg_category {
         background-image: url('/images/category-bg.png');
         background-repeat: no-repeat;
         background-size: contain;
         padding-top: 240px;
         padding-bottom: 100px;
     }
-
     &__title,
-    &__subtitle{
+    &__subtitle {
         text-align: center;
     }
-    &__title{
+    &__title {
         margin-bottom: 13px;
     }
-    &__btn{
+    &__btn {
         margin-top: 34px;
     }
-
-    &__breadcrumb{
-        margin-top: 54px;
-        margin-bottom: 44px;
-        margin-left: 7px;
+    &__breadcrumb {
+        @include my(2rem);
     }
-
-    &__suggestion{
+    &__suggestion {
         margin-bottom: 28px;
     }
-
-    &__solutions{
+    &__solutions {
         padding-top: 8px;
         padding-bottom: 122px;
     }
-
-    &__sale-card{
+    &__sale-card {
         margin: 0 2rem 2rem 2rem;
     }
     &__sale {
@@ -81,104 +75,102 @@
         text-align: center;
         margin-bottom: 57.5px;
     }
-
-    &__vectors{
-        svg.leaves1{
+    &__vectors {
+        svg.leaves1 {
             position: absolute;
             height: 435px;
             top: 766px;
             left: -105px;
         }
-        svg.leaves2{
+        svg.leaves2 {
             position: absolute;
             height: 315px;
             top: 1458px;
             right: -134px;
         }
-        svg.leaves3{
+        svg.leaves3 {
             position: absolute;
             height: 315px;
             bottom: -130px;
             right: 15px;
             transform: rotate(-20deg);
         }
-        svg.circles{
+        svg.circles {
             position: absolute;
             height: 1325px;
             left: -645px;
             bottom: -336px;
-            .st-circle{
+            .st-circle {
                 fill: #e9f3ee;
             }
         }
     }
-    &_bg_promo &__vectors{
-        svg.leaves1{
+    &_bg_promo &__vectors {
+        svg.leaves1 {
             top: 480px;
             left: -130px;
         }
-        svg.leaves2{
+        svg.leaves2 {
             transform: scale(1, -1) rotate(-67deg);
             top: 1000px;
         }
-        svg.leaves3{
+        svg.leaves3 {
             display: none;
         }
-        svg.circles{
+        svg.circles {
             height: 958px;
             left: -376px;
             bottom: -329px;
         }
     }
-    &_bg_catalog &__vectors{
-        svg.leaves1{
+    &_bg_catalog &__vectors {
+        svg.leaves1 {
             top: 1250px;
             left: -82px;
         }
-        svg.leaves2{
+        svg.leaves2 {
             transform: scale(1, -1) rotate(-67deg);
             top: 1000px;
             right: -120px;
         }
-        svg.leaves3{
+        svg.leaves3 {
             display: none;
         }
-        svg.circles{
+        svg.circles {
             display: none;
         }
     }
-    &_about-page &__vectors{
-        svg.leaves1{
+    &_about-page &__vectors {
+        svg.leaves1 {
             top: 515px;
             left: -130px;
         }
-        svg.leaves2{
+        svg.leaves2 {
             transform: scale(1, -1) rotate(-67deg);
             top: 1000px;
             right: -120px;
         }
-        svg.leaves3{
+        svg.leaves3 {
             display: none;
         }
-        svg.circles{
+        svg.circles {
             height: 958px;
             left: -376px;
             bottom: -329px;
         }
     }
-
     /* columns */
-    &__category-menu-col{
+    &__category-menu-col {
         @include make-col-ready();
         flex: 0 0 313px + $grid-gutter-width;
     }
-    &__product-col{
+    &__product-col {
         @include make-col-ready();
         background-color: $white;
         flex: 1 0 0;
         align-self: flex-start;
     }
-    &__category-col{
+    &__category-col {
         @include make-col-ready();
         padding: 0;
         flex: 1;

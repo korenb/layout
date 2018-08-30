@@ -1,0 +1,24 @@
+.similar-products {
+    &_solo {
+        background-color: $white;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+    &__caption {
+        font-size: 1.25rem;
+    }
+    &__category-link {
+        display: inline-block;
+        border-bottom: 1px solid;
+        font-weight: 700;
+        line-height: 1;
+        @include color($green);
+    }
+    &__product {
+        margin-top: 25px;
+        margin-bottom: 35px;
+    }
+    &__breadcrumb {
+        justify-content: center;
+    }
+}
