@@ -1,0 +1,61 @@
+.modal {
+    $p: .75rem 1rem;
+    width: 800px;
+    margin: 0 auto;
+
+    &__header {
+        padding: $p;
+        padding-top: 1rem;
+        background-color: $white;
+    }
+
+    &_opened &__body {
+        display: block;
+    }
+
+    &__body {
+        display: none;
+        background-color: $white;
+        padding: $p;
+        padding-top: 0;
+        padding-bottom: 1.5rem;
+
+        .divider {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-list {
+            margin-bottom: 1.5rem;
+        }
+
+        hr {
+            border-color: transparentize($gray-300, .6);
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+
+        .btn:first-child {
+            margin-right: 2rem;
+        }
+    }
+
+    &__note {
+        color: $white;
+        text-align: center;
+    }
+}
+
+.modal-overlay {
+    position: relative;
+    &:before {
+        content: '';
+        @include size(100%);
+        background-color: transparentize($black, .5);
+        position: absolute;
+        z-index: 1;
+    }
+}

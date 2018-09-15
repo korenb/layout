@@ -1,0 +1,51 @@
+.contacts-map {
+    position: absolute;
+    @include size(100%);
+    top: 0;
+}
+
+.contacts-page {
+    .title {
+        margin-top: 3rem;
+    }
+
+    &__schedule {
+        .schedule{
+            margin-bottom: 1rem;
+        }
+    }
+    .modal{
+        margin-bottom: 3rem;
+    }
+}
+
+.schedule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.25em;
+
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
+
+        &:not(:first-child) {
+            margin-left: 1em;
+        }
+    }
+
+    &__title {
+        @include text-shadow;
+    }
+
+    &__value {
+        font-weight: 700;
+        @include text-shadow;
+    }
+}

@@ -3,39 +3,42 @@
     margin: 0;
     padding: 0;
 }
-@mixin offset($x: 0, $y: 0){
+
+@mixin offset($x: 0, $y: 0) {
     left: $x;
     top: $y;
 }
-@mixin size($w, $h){
+
+@mixin size($w, $h) {
     width: $w;
     height: $h;
 }
-@mixin color($color, $colorOnHover: null){
-    color: $color;
-    // @debug $colorOnHover;
-    @if $colorOnHover == null {
+
+@mixin color($color, $colorOnHover: null) {
+    color: $color; // @debug $colorOnHover;
+    @if $colorOnHover==null {
         $colorOnHover: $color;
-    }
-    // @debug $colorOnHover;
-    &:hover{
+    } // @debug $colorOnHover;
+    &:hover {
         color: $colorOnHover;
     }
 }
-@mixin border-bottom($size, $color, $hover-color: null){
+
+@mixin border-bottom($size, $color, $hover-color: null) {
     border-bottom: $size solid $color;
-    &:hover{
-        border-color: $hover-color;
-    }
-}
-@mixin border($size, $color, $hover-color: null){
-    border: $size solid $color;
-    &:hover{
+    &:hover {
         border-color: $hover-color;
     }
 }
 
-@mixin placeholder-color($color){
+@mixin border($size, $color, $hover-color: null) {
+    border: $size solid $color;
+    &:hover {
+        border-color: $hover-color;
+    }
+}
+
+@mixin placeholder-color($color) {
     &::-webkit-input-placeholder {
         color: $color;
     }
@@ -51,4 +54,8 @@
         /* IE 10+ */
         color: $color;
     }
+}
+
+@mixin text-shadow($size: 5px) {
+    text-shadow: 0 0 $size black;
 }

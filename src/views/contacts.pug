@@ -1,0 +1,24 @@
+extends shared/layout
+
+block content
+    include shared/_category-menu
+
+    main.main-content.p-0.modal-overlay
+        .contacts-map
+            iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab70d33ee2235966ca6d2c4cef25d5ede67fd3f1fbbe5e2c65485768ea155125f&amp;source=constructor" width="100%" height="100%" frameborder="0")
+        .page-container.contacts-page
+            .contacts-page__schedule
+                .title.title_shadow.main-content__title Режим работы
+                .schedule
+                    .schedule__item
+                        .schedule__title Будние дни
+                        .schedule__value 08:00 - 18:00
+                    .schedule__item
+                        .schedule__title Суббота
+                        .schedule__value 10:00 - 16:00
+                    .schedule__item
+                        .schedule__title Воскресенье
+                        .schedule__value выходной
+                .divider.divider_white.divider_shadow
+
+            include partials/modal-window
