@@ -2,15 +2,42 @@
     $p: .75rem 1rem;
     width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 
     &__header {
         padding: $p;
         padding-top: 1rem;
         background-color: $white;
+        position: relative;
+        box-shadow: 0 0 15px transparentize($black, .6);
     }
 
-    &_opened &__body {
+    &__minimize-btn {
+        cursor: pointer;
+        height: 2rem;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+
+        svg {
+            fill: $muted;
+        }
+    }
+
+    &_opened &__minimize-btn {
+        svg>#y {
+            display: none;
+        }
+    }
+
+    &_opened &__body,
+    &_opened &__note {
         display: block;
+    }
+
+    &_opened &__header{
+        box-shadow: none;
     }
 
     &__body {
@@ -44,6 +71,7 @@
     }
 
     &__note {
+        display: none;
         color: $white;
         text-align: center;
     }
@@ -51,7 +79,13 @@
 
 .modal-overlay {
     position: relative;
-    &:before {
+
+    &_hidden::before {
+        content: none;
+        display: none;
+    }
+
+    &::before {
         content: '';
         @include size(100%);
         background-color: transparentize($black, .5);

@@ -4,9 +4,9 @@ block content
     include shared/_category-menu
 
     main.main-content.p-0.modal-overlay
-        .contacts-map
-            iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab70d33ee2235966ca6d2c4cef25d5ede67fd3f1fbbe5e2c65485768ea155125f&amp;source=constructor" width="100%" height="100%" frameborder="0")
-        .page-container.contacts-page
+        .contacts-page
+            .contacts-map
+                iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab70d33ee2235966ca6d2c4cef25d5ede67fd3f1fbbe5e2c65485768ea155125f&amp;source=constructor" width="100%" height="100%" frameborder="0")
             .contacts-page__schedule
                 .title.title_shadow.main-content__title Режим работы
                 .schedule
@@ -22,3 +22,22 @@ block content
                 .divider.divider_white.divider_shadow
 
             include partials/modal-window
+
+block append scripts
+    script.
+        $('#contacts-modal-minimizer').on('click', event => {
+            event.preventDefault();
+            let modal =  $(event.target).closest('.modal');
+            let modalHeight = modal.innerHeight();
+            let modalHeaderHeight = $('.modal__header', modal).innerHeight();
+            if (!modal.toggleClass('modal_opened').hasClass('modal_opened')){
+                modal.css({
+                    'margin-bottom': `calc(3rem + ${(modalHeight - modalHeaderHeight)}px)`
+                });
+            }else{
+                modal.css({
+                    'margin-bottom': ''
+                });
+            }
+            $(event.target).closest('.modal-overlay').toggleClass('modal-overlay_hidden');
+        });

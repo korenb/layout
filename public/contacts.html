@@ -4,12 +4,13 @@
     <title></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__inner page-container"><a class="header__logo logo-white" href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000.6 2190.2" class="logo">
+        <div class="header__inner page-container" style="z-index:11"><a class="header__logo logo-white" href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000.6 2190.2" class="logo">
     <style type="text/css">
         .st1 {
             fill-rule: evenodd;
@@ -355,10 +356,10 @@
         </div>
       </div>
       <main class="main-content p-0 modal-overlay">
-        <div class="contacts-map">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab70d33ee2235966ca6d2c4cef25d5ede67fd3f1fbbe5e2c65485768ea155125f&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-        </div>
-        <div class="page-container contacts-page">
+        <div class="contacts-page">
+          <div class="contacts-map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab70d33ee2235966ca6d2c4cef25d5ede67fd3f1fbbe5e2c65485768ea155125f&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+          </div>
           <div class="contacts-page__schedule">
             <div class="title title_shadow main-content__title">Режим работы</div>
             <div class="schedule">
@@ -380,6 +381,15 @@
           <div class="modal modal_opened">
             <div class="modal__header">
               <div class="title title_brown m-0">Контакты</div>
+              <div class="modal__minimize-btn" id="contacts-modal-minimizer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	<g id="y">
+		<path d="M276,20c0-11-9-20-20-20c-11,0-20,9-20,20v472c0,11,9,20,20,20c11,0,20-9,20-20V20z" />
+	</g>
+	<g id="x">
+		<path d="M492,236H20c-11,0-20,9-20,20c0,11,9,20,20,20h472c11,0,20-9,20-20C512,245,503,236,492,236z" />
+	</g>
+</svg>
+              </div>
             </div>
             <div class="modal__body">
               <p class="subtitle main-content__subtitle">
@@ -419,5 +429,23 @@
         </div>
       </footer>
     </div>
+    <script>
+      $('#contacts-modal-minimizer').on('click', event => {
+          event.preventDefault();
+          let modal =  $(event.target).closest('.modal');
+          let modalHeight = modal.innerHeight();
+          let modalHeaderHeight = $('.modal__header', modal).innerHeight();
+          if (!modal.toggleClass('modal_opened').hasClass('modal_opened')){
+              modal.css({
+                  'margin-bottom': `calc(3rem + ${(modalHeight - modalHeaderHeight)}px)`
+              });
+          }else{
+              modal.css({
+                  'margin-bottom': ''
+              });
+          }
+          $(event.target).closest('.modal-overlay').toggleClass('modal-overlay_hidden');
+      });
+    </script>
   </body>
 </html>
