@@ -22,6 +22,7 @@ block content
                 .divider.divider_white.divider_shadow
 
             include partials/modal-window
+            include partials/modal-request
 
 block append scripts
     script.
@@ -40,4 +41,12 @@ block append scripts
                 });
             }
             $(event.target).closest('.modal-overlay').toggleClass('modal-overlay_hidden');
+        });
+        // открытие окна отправки заявки
+        $('#contacts-modal-open-request-form').on('click', event => {
+            $('#modal-request').removeClass('d-none');
+        });
+        // закрытие окна отправки заявки
+        $('#modal-request-times').on('click', event => {
+            $('#modal-request').addClass('d-none');
         });
